@@ -31,6 +31,18 @@ export default function Chat() {
     return () => clearInterval(interval);
   }, []);
 
+  // aplica máscara ao telefone
+  const handlePhoneChange = (value: string) => {
+    let numbers = value.replace(/\D/g, "");
+    if (numbers.length > 11) numbers = numbers.slice(0, 11);
+
+    if (numbers.length <= 10) {
+      return numbers.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+    } else {
+      return numbers.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+    }
+  };
+
   const botReply = (finalText: string) => {
     setBotIsTyping(true);
     setMessages((prev) => [...prev, { role: "bot", text: "", typing: true }]);
@@ -147,7 +159,7 @@ export default function Chat() {
           <div className="space-y-2">
             <input
               type="text"
-              placeholder="Nome"
+              placeholder="Nome completo"
               className="w-full border border-[#bca49d] rounded-lg px-3 py-2
                          text-gray-900 placeholder-gray-500 focus:outline-none
                          focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
@@ -155,17 +167,20 @@ export default function Chat() {
               onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
             />
             <input
-              type="text"
-              placeholder="Telefone"
+              type="tel"
+              placeholder="(99) 99999-9999"
               className="w-full border border-[#bca49d] rounded-lg px-3 py-2
                          text-gray-900 placeholder-gray-500 focus:outline-none
                          focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
               value={formData.telefone}
-              onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, telefone: handlePhoneChange(e.target.value) })
+              }
+              maxLength={15}
             />
             <input
               type="email"
-              placeholder="Email"
+              placeholder="exemplo@email.com"
               className="w-full border border-[#bca49d] rounded-lg px-3 py-2
                          text-gray-900 placeholder-gray-500 focus:outline-none
                          focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
