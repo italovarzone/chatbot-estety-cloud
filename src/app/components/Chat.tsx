@@ -130,13 +130,13 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-[100dvh] w-screen bg-[#fff]">
-      {/* Header */}
-      <header className="bg-[#9d8983] text-white p-4 text-center shadow-md shrink-0">
+      {/* Header fixo */}
+      <header className="bg-[#9d8983] text-white p-4 text-center shadow-md fixed top-0 left-0 right-0 z-10">
         <h1 className="font-bold text-lg">Assistente Estety Cloud</h1>
       </header>
 
-      {/* Chat area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-0">
+      {/* Chat area com scroll */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-3 pt-20 pb-24">
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
@@ -153,8 +153,8 @@ export default function Chat() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
-      <div className="p-3 border-t bg-white shrink-0">
+      {/* Input fixo */}
+      <div className="p-3 border-t bg-white fixed bottom-0 left-0 right-0 z-10">
         {awaitingData ? (
           <div className="space-y-2">
             <input
