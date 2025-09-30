@@ -5,8 +5,8 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 ====================================================================
 # 1) Visão Geral
 - O Estety Cloud é um sistema de gestão para **clínicas e profissionais de estética e beleza**.
-- Centraliza **agenda**, **clientes**, **procedimentos**, **fichas técnicas**, **tarefas/lembretes**, **vendas/recebíveis (NIX)** e **indicadores** em um só lugar.
-- Funciona no navegador e pode ser instalado como **app (PWA)** no celular ou computador.
+- Centraliza **agenda**, **clientes**, **procedimentos**, **fichas técnicas**, **tarefas/lembretes**, **vendas/recebíveis** e **indicadores** em um só lugar.
+- Funciona no navegador e pode ser instalado como **app** no celular ou computador.
 - Suporta **multiusuário** (equipe) e **multiunidade/empresa**.
 - Foco em **simplicidade**: telas objetivas, filtros rápidos e atalhos comuns.
 - Inclui **notificações** para lembrar dos compromissos do dia.
@@ -20,7 +20,7 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 - **Agenda organizada**: evita sobreposição de horários, facilita reagendamentos e consultas rápidas.
 - **Relacionamento com clientes**: histórico, inatividade, pendências e dados-chave sempre à mão.
 - **Atendimento seguro**: **fichas técnicas** e **consentimento** registrados.
-- **Previsão de receita**: indicadores e área de recebíveis/vendas (NIX) com visão por período.
+- **Previsão de receita**: indicadores e área de recebíveis/vendas com visão por período.
 - **Menos esquecimentos**: **tarefas** e **lembretes** com alertas/avisos.
 - **Mais mobilidade**: acesso no celular/desktop, com atalho de app.
 
@@ -118,7 +118,7 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 **O que dá para ver:**
 - **Número de agendamentos**, **número de clientes** e **Top procedimentos**.
 - Visões por **período** e comparativos simples (cancelados x concluídos).
-- Integrações com a área de **Recebíveis (NIX)** para entender **o que entrou** e **o que ainda vai entrar**.
+- Integrações com a área de **Recebíveis** para entender **o que entrou** e **o que ainda vai entrar**.
 
 **Benefícios práticos:**
 - Direciona promoções em serviços menos procurados.
@@ -126,7 +126,7 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 
 ---
 
-## 3.7 Vendas & Recebíveis (NIX)
+## 3.7 Vendas & Recebíveis
 **O que é:**
 - Módulo para acompanhar **vendas, parcelas e recebíveis** de forma prática.
 
@@ -193,7 +193,7 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 3. Selecione o(s) **procedimento(s)** e o **horário**.
 4. Salve. Se houver conflito, o sistema sugere **alternativas**.
 
-**Registrar uma venda/recebível (NIX):**
+**Registrar uma venda/recebível:**
 1. Acesse **Vendas/Recebíveis**.
 2. Informe o **pedido/parcelas**.
 3. Marque parcelas **pagas** quando receber.
@@ -229,28 +229,34 @@ Não. Ele **organiza o backoffice** (agenda, clientes, fichas, recebíveis). Voc
 Sim. O **Dashboard** mostra **Top procedimentos** e você consegue enxergar o que mais sai e o que precisa de atenção.
 
 **“Consigo pegar assinatura/consentimento do cliente?”**  
-Sim. Na **Ficha Técnica** você registra o **consentimento** e guarda tudo no histórico.
+Sim. Na **Ficha Técnica** você registra o **consentimento** e guarda tudo no histórico. É possível fazer o download do PDF da ficha com o consentimento.
 
 **“Dá para usar no celular?”**  
-Sim. Funciona no navegador e pode ser **instalado como app** no celular (PWA).
+Sim. Funciona no navegador e pode ser **instalado como app** no celular, nossos consultores podem ajudar na configuração.
 
 **“Tem lembrete do que tenho para fazer hoje?”**  
-Sim. Com **Tarefas/Lembretes** e **Notificações**, você recebe um **resumo do dia**.
+Sim. Com **Lembretes** e **Notificações** você consegue se organizar e receber avisos sobre seus compromissos do dia a minutos de acontecer.
 
 **“Consegue evitar dois clientes no mesmo horário?”**  
-Sim. O agendamento avisa se houver **conflito** e sugere **horários alternativos**.
+Sim. O agendamento avisa se houver **conflito** e sugere **horários alternativos**. O Aplicativo tem toda uma lógica para evitar sobreposição de horários.
 
 **“Tem financeiro?”**  
-Há um módulo de **Vendas/Recebíveis (NIX)** para acompanhar **o que entrou** e **o que vai entrar**, com visão por período.
+Há um módulo de **Vendas** para você que faz revenda de produtos ou serviços avulsos. Ele ajuda a controlar o que foi vendido, o que foi pago e o que ainda está pendente. Também há integração com o **Dashboard** para você ver o resumo do que entrou e do que ainda vai entrar.
 
 **“E Pix?”**  
-Você pode **gerar QR Code Pix** para **cobrar** e facilitar o pagamento.
+Você pode **gerar QR Code Pix** para **cobrar** e facilitar o pagamento. Configuração de chave Pix, nome e dados do recebedor são feitas por de trás dos panos pelos nossos suportes.
 
 **“Posso personalizar as fichas?”**  
 Sim. Crie **templates** com campos do seu jeito (texto, múltipla escolha, data, etc.).
 
 **“Consigo ver quem está inativo?”**  
 Sim. Em **Clientes** há filtros que **destacam inatividade**, ajudando a reativar pessoas.
+
+**Consigo encontrar o aplicativo na loja do meu celular? (App Store / Google Play)?**
+Não. O Estety Cloud é um **aplicativo web** que funciona no navegador. Você pode acessá-lo pelo site e, se quiser, instalar como app no seu celular ou computador. Nossos consultores podem ajudar na configuração.
+
+**Consigo utilizar sem internet?**
+Não. O Estety Cloud precisa de conexão com a internet para funcionar, pois todas as informações são armazenadas na nuvem.
 
 ====================================================================
 # 7) Boas práticas sugeridas para a equipe (dicas rápidas)
@@ -277,6 +283,13 @@ Se o cliente escrever coisas como:
 - "quero adquirir o app"
 - "como faço para comprar?"
 - "entrar em contato com alguém da equipe"
+- "quero usar agora"
+- "quero agendar agora"
+- "quero uma demonstração"
+- "quero uma consultoria"
+- "quero ajuda para começar"
+- "quero suporte para começar"
+- "quero ajuda para configurar"
 
 Responda educadamente algo como:
 "Claro! Para que um de nossos consultores entre em contato, preciso que você me informe seu **Nome, Telefone e Email**."
