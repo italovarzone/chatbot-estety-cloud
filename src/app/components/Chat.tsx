@@ -117,19 +117,16 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-[#fff]">
+    <div className="flex flex-col h-[100dvh] w-screen bg-[#fff]">
       {/* Header */}
-      <header className="bg-[#9d8983] text-white p-4 text-center shadow-md">
+      <header className="bg-[#9d8983] text-white p-4 text-center shadow-md shrink-0">
         <h1 className="font-bold text-lg">Assistente Estety Cloud</h1>
       </header>
 
       {/* Chat area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-0">
         {messages.map((m, i) => (
-          <div
-            key={i}
-            className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
-          >
+          <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
               className={`max-w-[80%] p-3 rounded-2xl shadow-md whitespace-pre-line ${
                 m.role === "user"
@@ -145,36 +142,36 @@ export default function Chat() {
       </div>
 
       {/* Input */}
-      <div className="p-3 border-t bg-white">
+      <div className="p-3 border-t bg-white shrink-0">
         {awaitingData ? (
           <div className="space-y-2">
-          <input
-            type="text"
-            placeholder="Nome"
-            className="w-full border border-[#bca49d] rounded-lg px-3 py-2
-                      text-gray-900 placeholder-gray-500 focus:outline-none
-                      focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
-            value={formData.nome}
-            onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Telefone"
-            className="w-full border border-[#bca49d] rounded-lg px-3 py-2
-                      text-gray-900 placeholder-gray-500 focus:outline-none
-                      focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
-            value={formData.telefone}
-            onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full border border-[#bca49d] rounded-lg px-3 py-2
-                      text-gray-900 placeholder-gray-500 focus:outline-none
-                      focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
+            <input
+              type="text"
+              placeholder="Nome"
+              className="w-full border border-[#bca49d] rounded-lg px-3 py-2
+                         text-gray-900 placeholder-gray-500 focus:outline-none
+                         focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
+              value={formData.nome}
+              onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Telefone"
+              className="w-full border border-[#bca49d] rounded-lg px-3 py-2
+                         text-gray-900 placeholder-gray-500 focus:outline-none
+                         focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
+              value={formData.telefone}
+              onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full border border-[#bca49d] rounded-lg px-3 py-2
+                         text-gray-900 placeholder-gray-500 focus:outline-none
+                         focus:ring-2 focus:ring-[#9d8983] focus:border-[#9d8983]"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
             <button
               onClick={handleSend}
               className="w-full bg-[#9d8983] text-white py-2 rounded-lg font-medium hover:bg-[#bca49d] transition"
