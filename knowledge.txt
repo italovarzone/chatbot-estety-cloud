@@ -1,0 +1,285 @@
+# Estety Cloud — Knowledge (versão para atendimento comercial)
+Este documento foi pensado para treinar um chatbot que responde a **potenciais clientes** do Estety Cloud. 
+Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a dia** e quais **benefícios práticos** cada módulo entrega.
+
+====================================================================
+# 1) Visão Geral
+- O Estety Cloud é um sistema de gestão para **clínicas e profissionais de estética e beleza**.
+- Centraliza **agenda**, **clientes**, **procedimentos**, **fichas técnicas**, **tarefas/lembretes**, **vendas/recebíveis (NIX)** e **indicadores** em um só lugar.
+- Funciona no navegador e pode ser instalado como **app (PWA)** no celular ou computador.
+- Suporta **multiusuário** (equipe) e **multiunidade/empresa**.
+- Foco em **simplicidade**: telas objetivas, filtros rápidos e atalhos comuns.
+- Inclui **notificações** para lembrar dos compromissos do dia.
+
+**Para quem é ideal?**
+- Clínicas de estética, spas, esteticistas, lash/brow, depilação, massoterapia e serviços de beleza em geral.
+- Quem precisa **organizar a rotina**, **evitar conflitos na agenda** e **registrar histórico** de atendimentos.
+
+====================================================================
+# 2) Principais Benefícios
+- **Agenda organizada**: evita sobreposição de horários, facilita reagendamentos e consultas rápidas.
+- **Relacionamento com clientes**: histórico, inatividade, pendências e dados-chave sempre à mão.
+- **Atendimento seguro**: **fichas técnicas** e **consentimento** registrados.
+- **Previsão de receita**: indicadores e área de recebíveis/vendas (NIX) com visão por período.
+- **Menos esquecimentos**: **tarefas** e **lembretes** com alertas/avisos.
+- **Mais mobilidade**: acesso no celular/desktop, com atalho de app.
+
+====================================================================
+# 3) Módulos do Sistema
+
+## 3.1 Agenda & Calendário
+**O que é:** 
+- A forma mais rápida de **enxergar e planejar os atendimentos**.
+- Visualizações por **dia** e **mês**, com **Agenda Detalhada** para o dia corrente.
+
+**O que dá para fazer:**
+- **Agendar atendimentos** informando cliente, procedimentos, data e hora.
+- **Evitar conflitos de horário**: o sistema avisa quando um horário está ocupado e sugere alternativas.
+- **Concluir** ou **cancelar** compromissos e deixar observações.
+- Ver **Agenda Detalhada** do dia com tudo que precisa ser feito (atendimentos + tarefas).
+
+**Benefícios práticos:**
+- Reduz no-show e atrasos por falta de organização.
+- Facilita a distribuição do dia entre profissionais e salas.
+
+---
+
+## 3.2 Clientes
+**O que é:** 
+- Um cadastro simples e completo para **organizar sua base de clientes**.
+
+**O que dá para fazer:**
+- Cadastrar dados básicos (nome, contato, observações, data de nascimento).
+- **Buscar por nome** com rapidez (filtros e ordenações).
+- Ver **histórico de atendimentos** e **fichas técnicas** associadas.
+- Identificar **clientes inativos** (quem não volta há um tempo).
+- Ver **pendências** (ex.: sem dados importantes preenchidos).
+
+**Benefícios práticos:**
+- Ajuda a **reativar clientes** com campanhas direcionadas.
+- Facilita o atendimento com **histórico à vista**.
+
+---
+
+## 3.3 Procedimentos (Serviços)
+**O que é:**
+- Catálogo dos **serviços/procedimentos** oferecidos.
+
+**O que dá para fazer:**
+- Cadastrar nomes de serviços, tempo médio e valores.
+- Usar os procedimentos no momento do agendamento.
+- Acompanhar, no **Dashboard**, os **Top procedimentos** mais executados.
+
+**Benefícios práticos:**
+- Padroniza o atendimento e agiliza a marcação de horários.
+- Dá clareza do que mais vende e o que precisa de atenção.
+
+---
+
+## 3.4 Fichas Técnicas (Atendimento + Consentimento)
+**O que é:**
+- Registro formal do atendimento com **perguntas de saúde/estilo de vida**, fotos/observações e **consentimento** do cliente.
+- O Estety Cloud oferece **dois jeitos**: 
+  1) **Fichas fixas** (perguntas comuns do dia a dia, já prontas).
+  2) **Fichas por Template** (você monta o questionário do seu jeito).
+
+**O que dá para fazer:**
+- Preencher a ficha de cada atendimento e **guardar o consentimento** do cliente.
+- Criar **templates** personalizados de ficha (campos de texto, múltipla escolha, data, liga/desliga etc.).
+- Consultar o **histórico** por cliente, por data ou por tipo de procedimento.
+
+**Benefícios práticos:**
+- **Segurança** jurídica e técnica com registro de consentimento.
+- **Padronização** do protocolo de atendimento por serviço.
+- Facilita auditoria e acompanhamento de **evolução** do cliente.
+
+---
+
+## 3.5 Tarefas & Lembretes
+**O que é:**
+- Um bloco simples para **lembrar do que não pode ficar para depois**.
+
+**O que dá para fazer:**
+- Criar tarefas com data e hora (ex.: “Confirmar presença da Ana às 14h”).
+- Marcar como **concluída** e filtrar por status.
+- Receber **notificações** do que precisa ser feito hoje.
+- Criar **lembretes rápidos** para o dia.
+
+**Benefícios práticos:**
+- Diminui esquecimentos.
+- Ajuda na **rotina da clínica** (confirmar clientes, separar materiais, etc.).
+
+---
+
+## 3.6 Dashboard (Indicadores)
+**O que é:**
+- Um painel com **números essenciais** para decisões rápidas.
+
+**O que dá para ver:**
+- **Número de agendamentos**, **número de clientes** e **Top procedimentos**.
+- Visões por **período** e comparativos simples (cancelados x concluídos).
+- Integrações com a área de **Recebíveis (NIX)** para entender **o que entrou** e **o que ainda vai entrar**.
+
+**Benefícios práticos:**
+- Direciona promoções em serviços menos procurados.
+- Ajuda a planejar o **fluxo de caixa** e equipes.
+
+---
+
+## 3.7 Vendas & Recebíveis (NIX)
+**O que é:**
+- Módulo para acompanhar **vendas, parcelas e recebíveis** de forma prática.
+
+**O que dá para fazer:**
+- Registrar pedidos/parcelas e marcar as **pagas**.
+- Ver **a receber** por período (mês/quinzena) e o **quanto fica para a clínica** conforme regras configuráveis.
+- Visualizar **resumos** no Dashboard.
+
+**Benefícios práticos:**
+- Clareza do **dinheiro que entra** e do que ainda **vai entrar**.
+- Previsibilidade de caixa e melhor **controle financeiro**.
+
+---
+
+## 3.8 Pagamentos Pix (Cobrança Rápida)
+**O que é:**
+- Geração de **QR Code Pix** para cobrar o cliente de forma simples e segura.
+
+**O que dá para fazer:**
+- Informar valor e **gerar Pix** para receber na hora.
+- Usar os dados do **profissional** ou **unidade** cadastrados.
+- Copiar/colar o **código Pix** ou mostrar o **QR Code**.
+
+**Benefícios práticos:**
+- Agiliza o pagamento ao final do atendimento.
+- Reduz inadimplência e erros de valor.
+
+---
+
+## 3.9 Notificações (Web Push)
+**O que é:**
+- **Alertas** no celular/desktop sobre itens importantes.
+
+**O que dá para fazer:**
+- Receber aviso da **Agenda do Dia** (quem atende, horários, clientes).
+- Receber lembretes sobre **vendas/parcelas** do dia (quando configurado).
+- Ser lembrado de **tarefas** criadas no sistema.
+
+**Benefícios práticos:**
+- Mantém a equipe **alinhada** com o fluxo do dia.
+- Diminui esquecimentos e retrabalho.
+
+---
+
+## 3.10 Experiência de Uso (PWA)
+**O que é:**
+- O Estety Cloud pode ser **instalado como aplicativo** em celulares e computadores (ícone na tela).
+
+**O que dá para fazer:**
+- Abrir direto do ícone (sem digitar endereço).
+- Usar em tela cheia, com experiência de app.
+- Receber notificações quando ativadas.
+
+**Benefícios práticos:**
+- Acesso rápido para toda a equipe.
+- Menos dependência de instalação complexa — basta um navegador moderno.
+
+====================================================================
+# 4) Fluxos Comuns (Passo a passo)
+
+**Agendar um atendimento:**
+1. Abra **Agenda** e clique em **Novo Agendamento**.
+2. Escolha o **cliente** (ou cadastre um novo).
+3. Selecione o(s) **procedimento(s)** e o **horário**.
+4. Salve. Se houver conflito, o sistema sugere **alternativas**.
+
+**Registrar uma venda/recebível (NIX):**
+1. Acesse **Vendas/Recebíveis**.
+2. Informe o **pedido/parcelas**.
+3. Marque parcelas **pagas** quando receber.
+4. Confira os **resumos** no **Dashboard**.
+
+**Preencher a ficha técnica de um atendimento:**
+1. Abra o **cliente** e vá em **Fichas Técnicas**.
+2. Escolha um **template** (ou use a ficha padrão).
+3. Responda às perguntas e registre o **consentimento**.
+4. Salve e a ficha fica no **histórico** do cliente.
+
+**Criar um lembrete/tarefa:**
+1. Acesse **Tarefas/Lembretes**.
+2. Clique em **Nova Tarefa**.
+3. Descreva o que precisa ser feito e defina **data/hora**.
+4. Salve e, se desejar, ative **notificações**.
+
+====================================================================
+# 5) Privacidade e Segurança (em linguagem simples)
+- Os dados do cliente (contato, histórico, ficha e consentimento) **pertencem à sua clínica**.
+- As fichas técnicas são **privadas** e usadas apenas por você e sua equipe autorizada.
+- O consentimento do cliente fica **registrado** junto à ficha do atendimento.
+- Notificações são **opt-in**: você escolhe ativar no seu dispositivo.
+- A conta pode ter **múltiplos usuários** com acessos compatíveis ao papel de cada um.
+
+====================================================================
+# 6) Perguntas que o Chatbot deve responder com segurança
+
+**“O Estety Cloud substitui meu WhatsApp?”**  
+Não. Ele **organiza o backoffice** (agenda, clientes, fichas, recebíveis). Você pode continuar usando WhatsApp para comunicação com clientes, mas pode registrar no Estety Cloud o que foi marcado/realizado e os pagamentos.
+
+**“Consigo saber quais serviços mais vendem?”**  
+Sim. O **Dashboard** mostra **Top procedimentos** e você consegue enxergar o que mais sai e o que precisa de atenção.
+
+**“Consigo pegar assinatura/consentimento do cliente?”**  
+Sim. Na **Ficha Técnica** você registra o **consentimento** e guarda tudo no histórico.
+
+**“Dá para usar no celular?”**  
+Sim. Funciona no navegador e pode ser **instalado como app** no celular (PWA).
+
+**“Tem lembrete do que tenho para fazer hoje?”**  
+Sim. Com **Tarefas/Lembretes** e **Notificações**, você recebe um **resumo do dia**.
+
+**“Consegue evitar dois clientes no mesmo horário?”**  
+Sim. O agendamento avisa se houver **conflito** e sugere **horários alternativos**.
+
+**“Tem financeiro?”**  
+Há um módulo de **Vendas/Recebíveis (NIX)** para acompanhar **o que entrou** e **o que vai entrar**, com visão por período.
+
+**“E Pix?”**  
+Você pode **gerar QR Code Pix** para **cobrar** e facilitar o pagamento.
+
+**“Posso personalizar as fichas?”**  
+Sim. Crie **templates** com campos do seu jeito (texto, múltipla escolha, data, etc.).
+
+**“Consigo ver quem está inativo?”**  
+Sim. Em **Clientes** há filtros que **destacam inatividade**, ajudando a reativar pessoas.
+
+====================================================================
+# 7) Boas práticas sugeridas para a equipe (dicas rápidas)
+- **Confirme a agenda** do dia pela manhã pela Agenda Detalhada.
+- **Use tarefas** para tudo que pode cair no esquecimento (confirmação, materiais, follow-up).
+- **Padronize templates** de ficha por procedimento para ganhar velocidade e consistência.
+- **Revise o Dashboard** no fim da semana: top procedimentos e cancelamentos mostram onde ajustar.
+- **Ative Pix** para agilizar checkout e diminuir inadimplência.
+- **Mantenha cadastros completos** (contato, observações) para campanhas de reativação.
+
+====================================================================
+# 8) Resumo em 1 minuto (para conversas comerciais)
+- O Estety Cloud **organiza sua clínica**: **agenda + clientes + fichas + tarefas + recebíveis + indicadores**.
+- **Evita conflitos**, **registra consentimento**, **lembra do que fazer** e **mostra os números que importam**.
+- **Simples de usar**, funciona no **celular** e permite **cobrar por Pix**.
+- Ideal para quem quer **profissionalizar a rotina**, **ganhar tempo** e **aumentar recorrência**.
+
+====================================================================
+# 9) Quando o cliente quiser falar com um responsável / contratar
+Se o cliente escrever coisas como:
+- "quero falar com um consultor"
+- "preciso falar com um responsável"
+- "quero contratar"
+- "quero adquirir o app"
+- "como faço para comprar?"
+- "entrar em contato com alguém da equipe"
+
+Responda educadamente algo como:
+"Claro! Para que um de nossos consultores entre em contato, preciso que você me informe seu **Nome, Telefone e Email**."
+
+⚠️ IMPORTANTE: Sempre que isso acontecer, acione o modo de **captura de dados** (inputs no frontend) e envie os dados coletados por e-mail para **estetycloud@gmail.com**.
+====================================================================
