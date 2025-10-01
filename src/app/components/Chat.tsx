@@ -136,7 +136,11 @@ export default function Chat() {
       </header>
 
       {/* Chat area com scroll */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3 pt-20 pb-24">
+      <div
+        className={`flex-1 overflow-y-auto p-4 space-y-3 pt-20 ${
+          awaitingData ? "pb-64" : "pb-24"
+        }`}
+      >
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
