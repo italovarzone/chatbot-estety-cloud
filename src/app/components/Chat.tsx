@@ -131,9 +131,23 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-[100dvh] w-screen bg-[#fff] relative">
-      {/* Header fixo */}
-      <header className="bg-[#9d8983] text-white p-4 text-center shadow-md fixed top-0 left-0 right-0 z-10">
-        <h1 className="font-bold text-lg">Assistente Estety Cloud</h1>
+      {/* Header estilo WhatsApp */}
+      <header className="bg-[#9d8983] text-white px-4 py-2 flex items-center gap-3 shadow-md fixed top-0 left-0 right-0 z-10">
+        {/* Avatar fixo */}
+        <div className="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center">
+          <img 
+            src="/assets/images/robot.jpg" 
+            alt="Assistente Estety Cloud" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* Nome e status */}
+        <div className="flex flex-col">
+          <span className="font-bold text-base">Assistente Estety Cloud</span>
+          <span className="text-xs text-gray-200">
+            {botIsTyping ? "digitando..." : "online"}
+          </span>
+        </div>
       </header>
 
       {/* Modal de introdução */}
