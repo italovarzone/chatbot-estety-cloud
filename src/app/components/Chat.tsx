@@ -16,6 +16,7 @@ export default function Chat() {
   const [awaitingData, setAwaitingData] = useState(false);
   const [botIsTyping, setBotIsTyping] = useState(false);
   const [dots, setDots] = useState(".");
+  const [showIntro, setShowIntro] = useState(true); // controla o modal inicial
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
@@ -129,11 +130,35 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex flex-col h-[100dvh] w-screen bg-[#fff]">
+    <div className="flex flex-col h-[100dvh] w-screen bg-[#fff] relative">
       {/* Header fixo */}
       <header className="bg-[#9d8983] text-white p-4 text-center shadow-md fixed top-0 left-0 right-0 z-10">
         <h1 className="font-bold text-lg">Assistente Estety Cloud</h1>
       </header>
+
+      {/* Modal de introdução */}
+      {showIntro && (
+        <div className="absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 text-center">
+            <h2 className="text-xl font-bold mb-4 text-[#9d8983]">
+              Bem-vindo ao Assistente Estety Cloud 🤖
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Este é o seu assistente virtual!  
+              Ele pode responder dúvidas sobre o sistema, explicar funcionalidades e até te guiar no uso do Estety Cloud.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Clique em <strong>Começar</strong> para iniciar o chat.
+            </p>
+            <button
+              onClick={() => setShowIntro(false)}
+              className="bg-[#9d8983] text-white px-4 py-2 rounded-lg hover:bg-[#bca49d] transition"
+            >
+              Começar
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Chat area com scroll */}
       <div
