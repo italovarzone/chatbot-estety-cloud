@@ -10,14 +10,10 @@ export default function ChatContainer() {
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [showHistory, setShowHistory] = useState(false);
 
-  // Carrega histórico salvo
-  useEffect(() => {
-    const saved = localStorage.getItem("chatHistory");
-    if (saved) setChats(JSON.parse(saved));
-  }, []);
-
   // Salva automaticamente o histórico
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    
     const saveChats = async () => {
       const db = await openDB("ChatDB", 1, {
         upgrade(db) { db.createObjectStore("chats"); },

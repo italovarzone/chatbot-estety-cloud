@@ -5,6 +5,8 @@ import { Message } from "./Chat";
 import { openDB } from "idb";
 
 async function getHistory() {
+  if (typeof window === "undefined") return;
+
   const db = await openDB("ChatDB", 1, {
     upgrade(db) {
       if (!db.objectStoreNames.contains("chats")) {
@@ -16,6 +18,8 @@ async function getHistory() {
 }
 
 async function saveHistory(data: unknown) {
+  if (typeof window === "undefined") return;
+
   const db = await openDB("ChatDB", 1);
   await db.put("chats", data, "chatHistory");
 }

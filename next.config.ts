@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  headers: async () => [
+    {
+      source: "/(.*)",
+      headers: [
+        { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+        { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
+      ],
+    },
+  ],
 };
-
-export default nextConfig;
+module.exports = nextConfig;
