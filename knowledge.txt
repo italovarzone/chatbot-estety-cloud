@@ -1,464 +1,187 @@
-# Estety Cloud — Knowledge (versão para atendimento comercial)
-Este documento foi pensado para treinar um chatbot que responde a **potenciais clientes** do Estety Cloud. 
-Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a dia** e quais **benefícios práticos** cada módulo entrega.
+# Estety Cloud — Base de Conhecimento (para o Assistente Virtual)
 
-====================================================================
-# 1) Visão Geral
-- O Estety Cloud é um sistema de gestão com ênfase em **clínicas e profissionais de estética e beleza**.
-- Centraliza **agenda**, **clientes**, **procedimentos**, **fichas técnicas**, **tarefas/lembretes**, **vendas/recebíveis** e **indicadores** em um só lugar.
-- Funciona no navegador e pode ser instalado como **app** no celular ou computador.
-- Suporta **multiusuário** (equipe) e **multiunidade/empresa**.
-- Foco em **simplicidade**: telas objetivas, filtros rápidos e atalhos comuns.
-- Inclui **notificações** para lembrar dos compromissos do dia.
-
-**Para quem é ideal?**
-- Clínicas de estética, spas, esteticistas, lash/brow, depilação, massoterapia e serviços de beleza em geral.
-- Quem precisa **organizar a rotina**, **evitar conflitos na agenda** e **registrar histórico** de atendimentos.
-
-====================================================================
-# 2) Principais Benefícios
-- **Agenda organizada**: evita sobreposição de horários, facilita reagendamentos e consultas rápidas.
-- **Relacionamento com clientes**: histórico, inatividade, pendências e dados-chave sempre à mão.
-- **Atendimento seguro**: **fichas técnicas** e **consentimento** registrados.
-- **Previsão de receita**: indicadores e área de recebíveis/vendas com visão por período.
-- **Menos esquecimentos**: **tarefas** e **lembretes** com alertas/avisos.
-- **Mais mobilidade**: acesso no celular/desktop, com atalho de app.
-
-====================================================================
-# 3) Módulos do Sistema
-
-## 3.1 Agenda & Calendário
-**O que é:** 
-- A forma mais rápida de **enxergar e planejar os atendimentos**.
-- Visualizações por **dia** e **mês**, com **Agenda Detalhada** para o dia corrente.
-
-**O que dá para fazer:**
-- **Agendar atendimentos** informando cliente, procedimentos, data e hora.
-- **Evitar conflitos de horário**: o sistema avisa quando um horário está ocupado e sugere alternativas.
-- **Concluir** ou **cancelar** compromissos e deixar observações.
-- Ver **Agenda Detalhada** do dia com tudo que precisa ser feito (atendimentos + tarefas).
-
-**Benefícios práticos:**
-- Reduz no-show e atrasos por falta de organização.
-- Facilita a distribuição do dia entre profissionais e salas.
+Este documento foi criado para treinar o chatbot oficial do **Estety Cloud**, garantindo que ele mantenha **contexto contínuo** durante a conversa, lembrando o assunto atual até que o usuário deseje mudar.  
+O chatbot deve agir como um **consultor especializado**, explicando o sistema de forma natural e comercial — sem jargões técnicos.
 
 ---
 
-## 3.2 Clientes
-**O que é:** 
-- Um cadastro simples e completo para **organizar sua base de clientes**.
+## 🌐 1. O que é o Estety Cloud
 
-**O que dá para fazer:**
-- Cadastrar dados básicos (nome, contato, observações, data de nascimento).
-- **Buscar por nome** com rapidez (filtros e ordenações).
-- Ver **histórico de atendimentos** e **fichas técnicas** associadas.
-- Identificar **clientes inativos** (quem não volta há um tempo).
-- Ver **pendências** (ex.: sem dados importantes preenchidos).
+O **Estety Cloud** é um sistema de gestão completo para **clínicas, estúdios e profissionais da estética e beleza**.  
+Ele centraliza todos os processos do dia a dia: **agenda, clientes, fichas técnicas, vendas, controle financeiro e indicadores**.
 
-**Benefícios práticos:**
-- Ajuda a **reativar clientes** com campanhas direcionadas.
-- Facilita o atendimento com **histórico à vista**.
+Funciona direto no navegador (Google Chrome, Safari, Edge, etc.) e pode ser instalado como **aplicativo PWA** no celular ou computador, com ícone na tela.  
+É leve, prático e ideal para quem quer **organizar atendimentos, padronizar protocolos e aumentar a recorrência de clientes**.
 
----
+### 👥 Público ideal
+- Esteticistas, lash/brow designers, depiladoras, massoterapeutas, micropigmentadores e clínicas de estética em geral.  
+- Profissionais que precisam **organizar o fluxo de atendimentos**, **registrar histórico dos clientes**, e **controlar o financeiro com facilidade**.
 
-## 3.3 Procedimentos (Serviços)
-**O que é:**
-- Catálogo dos **serviços/procedimentos** oferecidos.
-
-**O que dá para fazer:**
-- Cadastrar nomes de serviços, tempo médio e valores.
-- Usar os procedimentos no momento do agendamento.
-- Acompanhar, no **Dashboard**, os **Top procedimentos** mais executados.
-
-**Benefícios práticos:**
-- Padroniza o atendimento e agiliza a marcação de horários.
-- Dá clareza do que mais vende e o que precisa de atenção.
+### ⚙️ Principais vantagens
+- **Tudo em um só lugar:** agenda, clientes, fichas, vendas, relatórios e notificações.  
+- **Atendimento mais seguro:** com consentimento digital e fichas técnicas completas.  
+- **Maior controle financeiro:** saiba o que foi vendido, pago e o que ainda falta receber.  
+- **Simplicidade real:** sistema direto, com atalhos e filtros rápidos.  
+- **Multiusuário e multiunidade:** ideal para quem trabalha em equipe ou tem mais de uma clínica.
 
 ---
 
-## 3.4 Fichas Técnicas
-**O que é:**
-- Registro formal do atendimento com **perguntas de saúde/estilo de vida** e **consentimento** do cliente.
-- O Estety Cloud oferece **Fichas Genéricas/Personalizadas** pelo proprio profissional.
+## 📋 2. Módulo de Fichas Técnicas
 
-**O que dá para fazer:**
-- Criar **templates** personalizados de ficha (campos de texto, múltipla escolha, data, liga/desliga etc.).
-- Caso queira montar a ficha técnica e terminar mais tarde, há a opção de salvar como **rascunho**, que pode ser editado posteriormente.
-- Cada cliente possui uma lista de fichas técnicas associadas a ele, assim o cliente pode ter, por exemplo, uma ficha de extensão de cílios e outra de limpeza de pele.
+### 💡 O que é
+As **Fichas Técnicas** são formulários digitais personalizados onde o profissional registra:
+- informações do atendimento,
+- histórico de saúde ou preferências do cliente,
+- e o **consentimento digital**.
 
-**Benefícios práticos:**
-- **Segurança** jurídica e técnica com registro de consentimento.
-- **Padronização** do protocolo de atendimento por serviço.
-- Facilita auditoria e acompanhamento de **evolução** do cliente.
+Cada ficha é baseada em um **modelo (template)** criado pelo próprio profissional.  
+Esses modelos determinam as perguntas, campos e estrutura usados durante o atendimento.
 
----
-
-## 3.5 Tarefas & Lembretes
-**O que é:**
-- Um bloco simples para **lembrar do que não pode ficar para depois**.
-
-**O que dá para fazer:**
-- Criar tarefas com data e hora (ex.: “Confirmar presença da Ana às 14h”).
-- Marcar como **concluída** e filtrar por status.
-- Receber **notificações** do que precisa ser feito hoje.
-- Criar **lembretes rápidos** para o dia.
-
-**Benefícios práticos:**
-- Diminui esquecimentos.
-- Ajuda na **rotina da clínica** (confirmar clientes, separar materiais, etc.).
+O Estety Cloud permite criar **quantas fichas quiser**, adaptando-as por tipo de serviço — por exemplo:
+> Extensão de Cílios, Limpeza de Pele, Massagem Relaxante, Depilação, etc.
 
 ---
 
-## 3.6 Dashboard (Indicadores)
-**O que é:**
-- Um painel com **números essenciais** para decisões rápidas.
+### 🧭 Como funciona a criação
 
-**O que dá para ver:**
-- **Número de agendamentos**, **número de clientes** e **Top procedimentos**.
-- Visões por **período** e comparativos simples (cancelados x concluídos).
-- Integrações com a área de **Recebíveis** para entender **o que entrou** e **o que ainda vai entrar**.
+1. **Acesse o módulo:**  
+   Vá em **Outros → Minhas Fichas Técnicas**.
 
-**Benefícios práticos:**
-- Direciona promoções em serviços menos procurados.
-- Ajuda a planejar o **fluxo de caixa** e equipes.
+2. **Clique em Nova Ficha:**  
+   O sistema abrirá o construtor de fichas.
 
----
+3. **Defina informações básicas:**  
+   - **Título da Ficha** (ex.: “Extensão de Cílios - Volume Russo”)  
+   - **Descrição (opcional)**  
+   - **Status da Ficha:**  
+     - 🟢 **Publicado:** pode ser usada em atendimentos.  
+     - 🟡 **Rascunho:** ainda em edição.  
+     - ⚪ **Arquivado:** guardada apenas para consulta.
 
-## 3.7 Vendas & Recebíveis
-**O que é:**
-- Módulo para acompanhar **vendas, parcelas e recebíveis** de forma prática.
+4. **Adicione campos (componentes):**  
+   Você pode criar perguntas ou áreas de resposta, com os seguintes tipos:
+   - 📝 Texto Curto  
+   - 🗒️ Texto Extenso  
+   - 🔘 Escolha Única  
+   - ☑️ Múltipla Escolha  
+   - 🔢 Número  
+   - 📅 Data  
+   - 🔄 Switch (Liga/Desliga)  
+   - 🧩 Título de Seção  
 
-**O que dá para fazer:**
-- Registrar pedidos/parcelas e marcar as **pagas**.
-- Ver **a receber** por período (mês/quinzena) e o **quanto fica para a clínica** conforme regras configuráveis.
-- Visualizar **resumos** no Dashboard.
+   💡 *Dica:* Clique em **Exemplo** para gerar uma ficha demonstrativa e entender o layout.
 
-**Benefícios práticos:**
-- Clareza do **dinheiro que entra** e do que ainda **vai entrar**.
-- Previsibilidade de caixa e melhor **controle financeiro**.
+5. **Organize os campos:**  
+   Cada campo pode ser **editado**, **removido** ou **movido** (para cima/baixo).
 
----
+6. **Visualize antes de salvar:**  
+   O botão **Visualizar Ficha** mostra exatamente como o formulário ficará durante o uso real.
 
-## 3.8 Pagamentos Pix (Cobrança Rápida)
-**O que é:**
-- Geração de **QR Code Pix** para cobrar o cliente de forma simples e segura.
-
-**O que dá para fazer:**
-- Informar valor e **gerar Pix** para receber na hora.
-- Usar os dados do **profissional** ou **unidade** cadastrados.
-- Copiar/colar o **código Pix** ou mostrar o **QR Code**.
-
-**Benefícios práticos:**
-- Agiliza o pagamento ao final do atendimento.
-- Reduz inadimplência e erros de valor.
+7. **Salve e publique:**  
+   Após revisar, clique em **Salvar**.  
+   A ficha será listada e poderá ser usada nos próximos atendimentos.
 
 ---
 
-## 3.9 Notificações (Web Push)
-**O que é:**
-- **Alertas** no celular/desktop sobre itens importantes.
-
-**O que dá para fazer:**
-- Receber aviso da **Agenda do Dia** (quem atende, horários, clientes).
-- Receber lembretes sobre **vendas/parcelas** do dia (quando configurado).
-- Ser lembrado de **tarefas** criadas no sistema.
-
-**Benefícios práticos:**
-- Mantém a equipe **alinhada** com o fluxo do dia.
-- Diminui esquecimentos e retrabalho.
+### 🤝 Benefícios na prática
+- **Segurança técnica e jurídica:** com registro do consentimento.  
+- **Padronização:** garante que todos os profissionais da equipe sigam o mesmo protocolo.  
+- **Histórico do cliente:** cada ficha fica vinculada ao perfil do cliente.  
+- **Organização e praticidade:** tudo digital, sem papéis ou impressões.
 
 ---
 
-## 3.10 Experiência de Uso (PWA)
-**O que é:**
-- O Estety Cloud pode ser **instalado como aplicativo** em celulares e computadores (ícone na tela).
+### 💬 Perguntas que o chatbot deve saber desenvolver em contexto
+- “Como criar uma ficha técnica?” → Responder com o passo a passo completo.  
+- “O que é status publicado?” → Explicar o significado dos três status.  
+- “Como adiciono perguntas personalizadas?” → Focar nos tipos de componentes.  
+- “Posso ver a ficha antes de salvar?” → Explicar o botão **Visualizar Ficha**.  
+- “Como padronizar fichas para minha equipe?” → Falar sobre templates reutilizáveis.  
+- “Posso usar a mesma ficha para vários clientes?” → Sim, ela serve de base para novos registros.
 
-**O que dá para fazer:**
-- Abrir direto do ícone (sem digitar endereço).
-- Usar em tela cheia, com experiência de app.
-- Receber notificações quando ativadas.
-
-**Benefícios práticos:**
-- Acesso rápido para toda a equipe.
-- Menos dependência de instalação complexa — basta um navegador moderno.
-
-====================================================================
-# 4) Fluxos Comuns (Passo a passo)
-
-Abaixo estão os fluxos mais usados, escritos de forma que o assistente consiga responder tanto **de forma direta** quanto **por partes**, quando o usuário pedir detalhes específicos.
+➡️ **Importante:** o chatbot deve continuar no mesmo assunto (Ficha Técnica) até o usuário mudar o tema ou escrever algo como “quero falar sobre vendas” ou “mudar de assunto”.
 
 ---
 
-## ✅ Como agendar um cliente
+## 💰 3. Módulo de Vendas e Revenda
 
-**Objetivo:** criar um compromisso com cliente, procedimentos, data e hora — evitando conflitos de horário.
+### 💡 O que é
+O módulo de **Vendas** (também chamado de **Revenda** ou **Pedidos**) ajuda a registrar **produtos e serviços vendidos**, controlar **parcelas**, e visualizar **o que já foi pago** e **o que ainda falta receber**.
 
-### Passo a passo
-1. **Acesse Agendamentos**  
-   Na aba **Agendamentos**, clique em **Cadastrar Agendamento**.
-
-2. **Escolha o cliente**  
-   Use o campo de busca e, se quiser, **filtre pelo nome** para agilizar.
-
-3. **Selecione os procedimentos**  
-   Adicione um ou mais **procedimentos**. O sistema soma o **valor total** automaticamente.
-
-4. **Defina data e horário**  
-   Escolha a **data** e o **horário** desejados.
-
-5. **Conflitos e alternativas**  
-   Se houver conflito (horário ocupado ou janela de segurança), o sistema **avisa** e **sugere horários alternativos**.  
-   (Você ainda pode optar por **Encaixe Forçado**, se necessário.)
-
-6. **Concluir**  
-   Clique em **Cadastrar Agendamento**. Você será redirecionado para **Meus Agendamentos** com o registro criado.
-
-### Dúvidas comuns (o bot pode responder só ao trecho relevante)
-- **“O que é conflito de horário?”** → Quando o horário escolhido se sobrepõe a outro compromisso ou entra na janela de segurança. O app sugere opções próximas.
-- **“Posso adicionar mais de um procedimento?”** → Sim. O total é somado automaticamente.
-- **“Consigo reagendar depois?”** → Sim, pela tela **Meus Agendamentos**.
-- **“O que é Encaixe Forçado?”** → Opção para salvar mesmo com conflito (use com critério).
+Perfeito para clínicas que vendem:
+- Produtos de revenda (ex.: cosméticos, cremes, kits de autocuidado);
+- Serviços com pagamento parcelado.
 
 ---
 
-## 🛒 Registrar uma venda / revenda / pedido
+### 🧭 Como registrar uma venda
 
-**Objetivo:** lançar produtos/serviços vendidos, definir parcelas e acompanhar pagamentos.
+1. **Acesse o módulo:**  
+   Vá em **Outros → Vendas**.
 
-### Passo a passo
-1. **Acesse Vendas**  
-   Na aba **Outros**, entre em **Vendas**.
+2. **Crie um novo pedido:**  
+   Clique em **Incluir**.  
+   Você verá duas guias: **Dados do Pedido** e **Plano de Pagamento**.  
+   > 💡 É obrigatório adicionar pelo menos um item antes de acessar o plano de pagamento.
 
-2. **Crie um novo pedido**  
-   Clique em **Incluir**. Você verá duas guias: **Dados do Pedido** e **Plano de Pagamento**.  
-   > **Importante:** Para ir ao **Plano de Pagamento**, primeiro **preencha a Data da Venda** e **adicione ao menos 1 item**.
-
-3. **Dados do Pedido**  
-   - **Cliente:** busque e selecione. (Pode filtrar por nome.)  
-   - **Data da Venda:** informe a data.  
-   - **Itens:** preencha e adicione cada item com:  
+3. **Preencha os dados do pedido:**  
+   - **Cliente** (busque por nome)  
+   - **Data da Venda**  
+   - **Itens**:  
      - Nome do Produto  
-     - Valor do Produto  
-     - Valor da Revenda (se houver)  
+     - Valor  
+     - Valor de Revenda (se aplicável)  
      - Quantidade  
-   - Clique em **Adicionar Item**. Os itens aparecem listados e podem ser **removidos** se necessário.
 
-4. **Plano de Pagamento**  
-   Aqui você visualiza **Valor da Revenda**, **Valor Total dos Produtos** e **Parcelas Pagas** (com o quanto falta para quitar).
+   Depois clique em **Adicionar Item**.  
+   Todos os itens aparecem listados e podem ser editados ou removidos.
 
-5. **Como definir as parcelas**
-   - **Automático:** informe **quantidade de parcelas**, **forma de pagamento** (Pix, Cartão de Crédito, Dinheiro ou **Notas Promissórias**) e **dia padrão do pagamento**. O sistema divide o total igualmente.  
-   - **Manual:** informe **data**, **valor** e **forma** para **cada parcela** e **adicione** uma a uma.
+4. **Configure o plano de pagamento:**  
+   Existem duas formas de gerar parcelas:
+   - **Automático:** informe o número de parcelas, forma de pagamento (Pix, Cartão, Dinheiro ou Nota Promissória) e o dia padrão.  
+     O sistema divide o total igualmente.  
+   - **Manual:** defina manualmente a data, o valor e a forma de cada parcela.
 
-6. **Gerenciar parcelas**  
-   Use **Adicionar Parcela** para incluir. Você pode **remover uma** específica ou **remover todas** e refazer.
-
-7. **Salvar**  
-   Revise e clique em **Salvar** para registrar a venda.
-
-### Dúvidas comuns (o bot pode responder só ao trecho relevante)
-- **“Qual a diferença entre Automático e Manual?”**  
-  → No **Automático** o sistema divide igualmente por você; no **Manual** você define cada parcela (datas/valores).
-- **“Quais formas de pagamento existem?”**  
-  → **Pix**, **Cartão de Crédito**, **Dinheiro** e **Notas Promissórias**.
-- **“Posso editar as parcelas depois?”**  
-  → Sim, você pode **remover** e **recriar** conforme precisar.
-- **“Onde vejo o que falta pagar?”**  
-  → Na guia **Plano de Pagamento**, em **Parcelas Pagas** (mostra o que já entrou e o que falta).
+5. **Revise e salve:**  
+   Após adicionar as parcelas, clique em **Salvar**.  
+   O sistema registrará o pedido e mostrará o resumo financeiro.
 
 ---
 
-### 💬 Dica para o assistente
-- Se o usuário pedir “**como agendar**”, responda com o **passo a passo** e **avise sobre conflitos e sugestões de horário**.  
-- Se perguntar sobre “**parcelas**”, explique apenas **Automático x Manual** e **formas de pagamento**, sem recontar o fluxo inteiro.  
-- Se pedir “**onde vejo o total**”, direcione para **Plano de Pagamento** (Vendas) ou para o **total do agendamento** (no fluxo de agendar).  
-- Sempre que fizer sentido, encerre com uma pergunta de continuidade natural, ex.:  
-  “Quer que eu te mostre **como escolher os procedimentos** na prática?” ou  
-  “Prefere **parcelamento automático** ou **manual**? Posso explicar os dois rapidinho.”
+### 💬 Perguntas que o chatbot deve entender e continuar o contexto
+- “Como registrar uma venda?” → Responder o passo a passo completo.  
+- “Qual a diferença entre pagamento automático e manual?” → Explicar o comportamento das parcelas.  
+- “Quais formas de pagamento posso usar?” → Pix, cartão, dinheiro e nota promissória.  
+- “Como ver o que falta pagar?” → Explicar o campo **Parcelas Pagas**.  
+- “Posso editar depois de salvar?” → Sim, é possível remover e recriar parcelas.
+
+➡️ **O chatbot deve manter o contexto de Vendas** até que o usuário mude o assunto manualmente.
 
 ---
 
-**Cadastro de ficha técnica ou ficha de anamnese:**
+## 🧠 4. Regras de Contexto para o Chatbot
 
-A **Ficha Técnica** (ou **Ficha de Anamnese**) é onde o profissional registra **informações detalhadas do atendimento** e o **consentimento do cliente**.  
-Ela funciona como um **formulário digital personalizável**, com campos de texto, seleção, data, switches (liga/desliga) e muito mais.
-
-Cada ficha é baseada em um **modelo (template)** criado pelo profissional, que define os **campos e perguntas** que aparecerão durante o atendimento.  
-Você pode criar diferentes modelos conforme o tipo de serviço (ex.: *Extensão de Cílios*, *Limpeza de Pele*, *Depilação*, etc.).
-
----
-
-### 🪄 Passo a passo para criar uma ficha técnica
-
-1. **Acesse o módulo**
-   - Vá até a aba **Outros** e clique em **Minhas Fichas Técnicas**.
-   - É ali que ficam todas as fichas criadas, com seus status e versões.
-
-2. **Crie uma nova ficha**
-   - Clique no botão **Nova Ficha** para abrir o construtor de fichas técnicas.
-
-3. **Defina as informações básicas**
-   - **Título da Ficha:** nome que identifica o tipo de atendimento (ex.: “Extensão de Cílios - Volume Russo”).  
-   - **Descrição (opcional):** resumo sobre o objetivo da ficha.  
-   - **Status da Ficha:**
-     - 🟢 **Publicado:** pronto para uso nos atendimentos.
-     - 🟡 **Rascunho:** ainda em construção, não disponível para uso.
-     - ⚪ **Arquivado:** guardado apenas para consulta, não pode ser usado em novos atendimentos.
-
-4. **Monte os campos da ficha (componentes)**
-   - Você pode adicionar **campos dinâmicos** clicando em **Adicionar Campo**.
-   - Cada campo (componente) representa uma pergunta ou informação a ser coletada.
-   - Tipos de campos disponíveis:
-     1. 📝 **Texto Curto:** para respostas simples (ex.: “Nome do cliente”).
-     2. 🗒️ **Texto Extenso:** para respostas detalhadas (ex.: “Observações do atendimento”).
-     3. 🔘 **Escolha Um:** múltipla escolha simples (ex.: “Tipo de pele: Seca / Oleosa / Mista”).
-     4. ☑️ **Escolha Vários:** seleção múltipla (ex.: “Serviços realizados: Limpeza / Peeling / Hidratação”).
-     5. 🔢 **Número:** campos numéricos (ex.: “Idade”, “Duração do procedimento”).
-     6. 📅 **Data:** campos para registrar datas específicas.
-     7. 🔄 **Switch (Liga/Desliga):** perguntas de sim/não (ex.: “É gestante?”).
-     8. 🧩 **Título de Seção:** usado para separar blocos da ficha.
-
-   💡 **Dica:** clique no botão **“Exemplo”** (canto superior direito) — o sistema criará uma ficha automática para demonstrar como o construtor funciona.
-
-5. **Organize e edite os campos**
-   - Cada campo aparece em uma **lista de componentes**, onde você pode:
-     - ✏️ **Editar:** alterar o texto, tipo ou opções.
-     - 🗑️ **Remover:** excluir o campo.
-     - ⬆️⬇️ **Mover:** alterar a ordem dos campos.
-
-6. **Pré-visualize a ficha**
-   - Antes de salvar, clique em **Visualizar Ficha** para abrir um modal com a **visualização real** da ficha preenchida.  
-   - Isso permite conferir o layout final antes de publicar.
-
-7. **Salve e finalize**
-   - Clique em **Salvar** para registrar a ficha.  
-   - Após salvar, o sistema retorna à listagem, onde você pode:
-     - Consultar todas as fichas criadas,  
-     - Editar versões anteriores,  
-     - Ou criar uma nova versão a partir de outra já existente.
+- O assistente deve **permanecer no mesmo módulo** (ex.: Fichas Técnicas, Vendas) enquanto o usuário continuar fazendo perguntas relacionadas.  
+- Só mude de assunto quando o usuário indicar claramente:  
+  - “quero falar sobre vendas”  
+  - “voltar para o início”  
+  - “mudar de assunto”  
+  - “outra dúvida”  
+- Sempre que terminar uma explicação, o assistente deve oferecer uma **continuação natural**, como:
+  - “Quer que eu te mostre como fazer isso na prática?”  
+  - “Deseja que eu explique sobre outro módulo, como Vendas ou Fichas?”  
+  - “Posso te mostrar como o cliente visualiza essa informação no sistema?”
 
 ---
 
-### 💬 Perguntas comuns sobre fichas técnicas
-
-- **“O que significa o status publicado?”**  
-  → Significa que a ficha está pronta e disponível para ser usada em atendimentos.
-
-- **“Posso criar várias fichas diferentes?”**  
-  → Sim! Cada ficha é independente e pode representar um tipo de serviço específico.
-
-- **“Como eu adiciono perguntas na ficha?”**  
-  → Basta clicar em **Adicionar Campo** e escolher o tipo de componente desejado (texto, número, múltipla escolha etc.).
-
-- **“Tem como ver como a ficha vai ficar antes de salvar?”**  
-  → Sim. Use o botão **Visualizar Ficha** para abrir a pré-visualização completa.
-
-- **“Posso testar um modelo pronto?”**  
-  → Sim. O botão **Exemplo** cria uma ficha de demonstração para você entender como ela funciona.
+## 🔒 5. Privacidade e Dados
+- As fichas, clientes e vendas são **armazenadas com segurança** e pertencem exclusivamente à clínica ou profissional.  
+- Apenas usuários autorizados da conta podem visualizar ou editar os registros.  
+- O consentimento do cliente é guardado junto à ficha técnica, com data e hora do registro.
 
 ---
 
-### 🤖 Dica para o assistente
-
-Se o usuário perguntar algo relacionado a:
-- criação de ficha,  
-- status,  
-- tipos de campos,  
-- pré-visualização,  
-- ou diferença entre modelos,  
-
-→ Responda usando os trechos correspondentes acima.  
-→ Se ele quiser ver um exemplo, explique o botão **Exemplo** e **Visualizar Ficha**.  
-→ Se pedir orientação prática, descreva o fluxo de forma resumida e convide para continuar (“Quer que eu te mostre o passo a passo na prática?”).
-
-**Criar um lembrete/tarefa:**
-1. Acesse **Tarefas/Lembretes**.
-2. Clique em **Nova Tarefa**.
-3. Descreva o que precisa ser feito e defina **data/hora**.
-4. Salve e, se desejar, ative **notificações**.
-
-====================================================================
-# 5) Privacidade e Segurança (em linguagem simples)
-- Os dados do cliente (contato, histórico, ficha e consentimento) **pertencem à sua clínica**.
-- As fichas técnicas são **privadas** e usadas apenas por você e sua equipe autorizada.
-- O consentimento do cliente fica **registrado** junto à ficha do atendimento.
-- Notificações são **opt-in**: você escolhe ativar no seu dispositivo.
-- A conta pode ter **múltiplos usuários** com acessos compatíveis ao papel de cada um.
-
-====================================================================
-# 6) Perguntas que o Chatbot deve responder com segurança
-
-**“O Estety Cloud substitui meu WhatsApp?”**  
-Não. Ele **organiza o backoffice** (agenda, clientes, fichas, recebíveis). Você pode continuar usando WhatsApp para comunicação com clientes, mas pode registrar no Estety Cloud o que foi marcado/realizado e os pagamentos.
-
-**“Consigo saber quais serviços mais vendem?”**  
-Sim. O **Dashboard** mostra **Top procedimentos** e você consegue enxergar o que mais sai e o que precisa de atenção.
-
-**“Consigo pegar assinatura/consentimento do cliente?”**  
-Sim. Na **Ficha Técnica** você registra o **consentimento** e guarda tudo no histórico. É possível fazer o download do PDF da ficha com o consentimento.
-
-**“Dá para usar no celular?”**  
-Sim. Funciona no navegador e pode ser **instalado como app** no celular, nossos consultores podem ajudar na configuração.
-
-**“Tem lembrete do que tenho para fazer hoje?”**  
-Sim. Com **Lembretes** e **Notificações** você consegue se organizar e receber avisos sobre seus compromissos do dia a minutos de acontecer.
-
-**“Consegue evitar dois clientes no mesmo horário?”**  
-Sim. O agendamento avisa se houver **conflito** e sugere **horários alternativos**. O Aplicativo tem toda uma lógica para evitar sobreposição de horários.
-
-**“Tem financeiro?”**  
-Há um módulo de **Vendas** para você que faz revenda de produtos ou serviços avulsos. Ele ajuda a controlar o que foi vendido, o que foi pago e o que ainda está pendente. Também há integração com o **Dashboard** para você ver o resumo do que entrou e do que ainda vai entrar.
-
-**“E Pix?”**  
-Você pode **gerar QR Code Pix** para **cobrar** e facilitar o pagamento. Configuração de chave Pix, nome e dados do recebedor são feitas por de trás dos panos pelos nossos suportes.
-
-**“Posso personalizar as fichas?”**  
-Sim. Crie **templates** com campos do seu jeito (texto, múltipla escolha, data, etc.).
-
-**“Consigo ver quem está inativo?”**  
-Sim. Em **Clientes** há filtros que **destacam inatividade**, ajudando a reativar pessoas.
-
-**Consigo encontrar o aplicativo na loja do meu celular? (App Store / Google Play)?**
-Não. O Estety Cloud é um **aplicativo web** que funciona no navegador. Você pode acessá-lo pelo site e, se quiser, instalar como app no seu celular ou computador. Nossos consultores podem ajudar na configuração.
-
-**Consigo utilizar sem internet?**
-Não. O Estety Cloud precisa de conexão com a internet para funcionar, pois todas as informações são armazenadas na nuvem.
-
-====================================================================
-# 7) Boas práticas sugeridas para a equipe (dicas rápidas)
-- **Confirme a agenda** do dia pela manhã pela Agenda Detalhada.
-- **Use tarefas** para tudo que pode cair no esquecimento (confirmação, materiais, follow-up).
-- **Padronize templates** de ficha por procedimento para ganhar velocidade e consistência.
-- **Revise o Dashboard** no fim da semana: top procedimentos e cancelamentos mostram onde ajustar.
-- **Ative Pix** para agilizar checkout e diminuir inadimplência.
-- **Mantenha cadastros completos** (contato, observações) para campanhas de reativação.
-
-====================================================================
-# 8) Resumo em 1 minuto (para conversas comerciais)
-- O Estety Cloud **organiza sua clínica**: **agenda + clientes + fichas + tarefas + recebíveis + indicadores**.
-- **Evita conflitos**, **registra consentimento**, **lembra do que fazer** e **mostra os números que importam**.
-- **Simples de usar**, funciona no **celular** e permite **cobrar por Pix**.
-- Ideal para quem quer **profissionalizar a rotina**, **ganhar tempo** e **aumentar recorrência**.
-
-====================================================================
-# 9) Quando o cliente quiser falar com um responsável / contratar
-Se o cliente escrever coisas como:
-- "quero falar com um consultor"
-- "preciso falar com um responsável"
-- "quero contratar"
-- "quero adquirir o app"
-- "como faço para comprar?"
-- "entrar em contato com alguém da equipe"
-- "quero usar agora"
-- "quero agendar agora"
-- "quero uma demonstração"
-- "quero uma consultoria"
-- "quero ajuda para começar"
-- "quero suporte para começar"
-- "quero ajuda para configurar"
-
-Responda educadamente algo como:
-"Claro! Para que um de nossos consultores entre em contato, preciso que você me informe seu **Nome, Telefone e Email**."
-
-⚠️ IMPORTANTE: Sempre que isso acontecer, acione o modo de **captura de dados** (inputs no frontend) e envie os dados coletados por e-mail para **estetycloud@gmail.com**.
-====================================================================
+## ⚡ Resumo rápido para o chatbot usar quando for necessário
+> “O Estety Cloud é um sistema completo para clínicas e profissionais da estética.  
+> Ele centraliza atendimentos, fichas técnicas e vendas em um único lugar, garantindo praticidade e segurança.  
+> Quer que eu te mostre como usar as fichas ou prefere entender o módulo de vendas primeiro?”
