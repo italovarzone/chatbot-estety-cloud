@@ -1,7 +1,6 @@
 # Estety Cloud — Knowledge (versão para atendimento comercial)
 Este documento foi pensado para treinar um chatbot que responde a **potenciais clientes** do Estety Cloud. 
 Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a dia** e quais **benefícios práticos** cada módulo entrega.
-Quando encontrar na documentação algo como "!!", o texto que estiver na frente é uma instrução para o chatbot, não deve ser lido para o cliente.
 
 ====================================================================
 # 1) Visão Geral
@@ -91,8 +90,6 @@ Quando encontrar na documentação algo como "!!", o texto que estiver na frente
 - **Segurança** jurídica e técnica com registro de consentimento.
 - **Padronização** do protocolo de atendimento por serviço.
 - Facilita auditoria e acompanhamento de **evolução** do cliente.
-
-!! Caso o cliente pergunte "Como criar uma ficha técnica?" ou "Como cadastrar uma ficha técnica?", responda com o passo a passo detalhado na seção 4 (Fluxos Comuns) em **Cadastro de ficha técnica ou ficha de anamnese**.
 
 ---
 
@@ -188,52 +185,191 @@ Quando encontrar na documentação algo como "!!", o texto que estiver na frente
 ====================================================================
 # 4) Fluxos Comuns (Passo a passo)
 
-**Como agendar um cliente:**
-1. Na aba **Agendamentos**, encontre "Cadastrar Agendamento" em seguida clique para acessar.
-2. Selecione o **cliente** no campo de busca, podendo também filtrar pelo **nome do cliente** para agilizar a busca.
-3. Em seguida, o(s) **procedimento(s)**, mostrando o valor total caso selecione mais de um.
-4. Por fim, selecione a **data** desejada do agendamento e o **horário**.
-5. Clique no botão **Cadastrar Agendamento**. Caso haja conflitos na agenda, o sistema avisa sobre alguma intercorrência do profissional, conflitos entre horarios e sempre dá a opção de **Encaixe Forçado** na agenda.
-6. O Aplicativo encaminhará você para a tela de **Meus agendamentos** com o agendamento criado.
+Abaixo estão os fluxos mais usados, escritos de forma que o assistente consiga responder tanto **de forma direta** quanto **por partes**, quando o usuário pedir detalhes específicos.
 
-**Registrar uma venda/revenda/pedido:**
-1. Na aba **Outros**, acesse o módulo **Vendas**.
-2. Clique no botão **Incluir**.
-3. Será apresentado duas guias, a primeira sendo **Dados do Pedido** e a outra **Plano de Pagamento**. Observações:
-  - Para seguir para a proxima guia, é necessário que preencha a data da venda e adicione ao menos um item antes de prosseguir.
-4. Selecione o **cliente** no campo de busca, podendo também filtrar pelo **nome do cliente** para agilizar a busca.
-5. Preencha **Data da Venda**.
-6. Em seguida, o(s) **item(s)**, com os campos:
-  - Nome do Produto
-  - Valor do Produto
-  - Valor da Revenda (Se houver)
-  - Quantidade
-7. Preenchendo as informações, clique em **Adicionar Item**. Agora, exibirá uma listagem dos itens adicionados e permitirá que você **Remova** caso necessário.
-8. Agora, clique na guia **Plano de Pagamento**.
-9. Na aba **Plano de Pagamento** é exibido o **Valor da Revenda**, **Valor Total dos Produtos** e as **Parcelas Pagas** avisando a quantidade que falta para quitar o pedido.
-10. Seguindo, você pode aplicar o plano de pagamento de **duas formas**, sendo elas **Automático** e **Manual**.
-  - No **Automático**, você informa a quantidade de parcelas, a forma de pagamento entre: **Pix**, **Cartão de Crédito**, **Dinheiro** ou **Notas Promissórias**, e o dia do pagamento padrão. O sistema se encarrega de dividir o valor total em parcelas iguais.
-  - No **Manual**, você informa a data da parcela, valor, forma de pagamento e adiciona uma a uma.
-11. Após preencher as informações, clique em **Adicionar Parcela**. Agora, exibirá uma listagem das parcelas adicionadas e permitirá que você **Remova** uma ou **Remova todas** caso necessário.
-12. Por fim, clique em **Salvar** para registrar a venda.
+---
+
+## ✅ Como agendar um cliente
+
+**Objetivo:** criar um compromisso com cliente, procedimentos, data e hora — evitando conflitos de horário.
+
+### Passo a passo
+1. **Acesse Agendamentos**  
+   Na aba **Agendamentos**, clique em **Cadastrar Agendamento**.
+
+2. **Escolha o cliente**  
+   Use o campo de busca e, se quiser, **filtre pelo nome** para agilizar.
+
+3. **Selecione os procedimentos**  
+   Adicione um ou mais **procedimentos**. O sistema soma o **valor total** automaticamente.
+
+4. **Defina data e horário**  
+   Escolha a **data** e o **horário** desejados.
+
+5. **Conflitos e alternativas**  
+   Se houver conflito (horário ocupado ou janela de segurança), o sistema **avisa** e **sugere horários alternativos**.  
+   (Você ainda pode optar por **Encaixe Forçado**, se necessário.)
+
+6. **Concluir**  
+   Clique em **Cadastrar Agendamento**. Você será redirecionado para **Meus Agendamentos** com o registro criado.
+
+### Dúvidas comuns (o bot pode responder só ao trecho relevante)
+- **“O que é conflito de horário?”** → Quando o horário escolhido se sobrepõe a outro compromisso ou entra na janela de segurança. O app sugere opções próximas.
+- **“Posso adicionar mais de um procedimento?”** → Sim. O total é somado automaticamente.
+- **“Consigo reagendar depois?”** → Sim, pela tela **Meus Agendamentos**.
+- **“O que é Encaixe Forçado?”** → Opção para salvar mesmo com conflito (use com critério).
+
+---
+
+## 🛒 Registrar uma venda / revenda / pedido
+
+**Objetivo:** lançar produtos/serviços vendidos, definir parcelas e acompanhar pagamentos.
+
+### Passo a passo
+1. **Acesse Vendas**  
+   Na aba **Outros**, entre em **Vendas**.
+
+2. **Crie um novo pedido**  
+   Clique em **Incluir**. Você verá duas guias: **Dados do Pedido** e **Plano de Pagamento**.  
+   > **Importante:** Para ir ao **Plano de Pagamento**, primeiro **preencha a Data da Venda** e **adicione ao menos 1 item**.
+
+3. **Dados do Pedido**  
+   - **Cliente:** busque e selecione. (Pode filtrar por nome.)  
+   - **Data da Venda:** informe a data.  
+   - **Itens:** preencha e adicione cada item com:  
+     - Nome do Produto  
+     - Valor do Produto  
+     - Valor da Revenda (se houver)  
+     - Quantidade  
+   - Clique em **Adicionar Item**. Os itens aparecem listados e podem ser **removidos** se necessário.
+
+4. **Plano de Pagamento**  
+   Aqui você visualiza **Valor da Revenda**, **Valor Total dos Produtos** e **Parcelas Pagas** (com o quanto falta para quitar).
+
+5. **Como definir as parcelas**
+   - **Automático:** informe **quantidade de parcelas**, **forma de pagamento** (Pix, Cartão de Crédito, Dinheiro ou **Notas Promissórias**) e **dia padrão do pagamento**. O sistema divide o total igualmente.  
+   - **Manual:** informe **data**, **valor** e **forma** para **cada parcela** e **adicione** uma a uma.
+
+6. **Gerenciar parcelas**  
+   Use **Adicionar Parcela** para incluir. Você pode **remover uma** específica ou **remover todas** e refazer.
+
+7. **Salvar**  
+   Revise e clique em **Salvar** para registrar a venda.
+
+### Dúvidas comuns (o bot pode responder só ao trecho relevante)
+- **“Qual a diferença entre Automático e Manual?”**  
+  → No **Automático** o sistema divide igualmente por você; no **Manual** você define cada parcela (datas/valores).
+- **“Quais formas de pagamento existem?”**  
+  → **Pix**, **Cartão de Crédito**, **Dinheiro** e **Notas Promissórias**.
+- **“Posso editar as parcelas depois?”**  
+  → Sim, você pode **remover** e **recriar** conforme precisar.
+- **“Onde vejo o que falta pagar?”**  
+  → Na guia **Plano de Pagamento**, em **Parcelas Pagas** (mostra o que já entrou e o que falta).
+
+---
+
+### 💬 Dica para o assistente
+- Se o usuário pedir “**como agendar**”, responda com o **passo a passo** e **avise sobre conflitos e sugestões de horário**.  
+- Se perguntar sobre “**parcelas**”, explique apenas **Automático x Manual** e **formas de pagamento**, sem recontar o fluxo inteiro.  
+- Se pedir “**onde vejo o total**”, direcione para **Plano de Pagamento** (Vendas) ou para o **total do agendamento** (no fluxo de agendar).  
+- Sempre que fizer sentido, encerre com uma pergunta de continuidade natural, ex.:  
+  “Quer que eu te mostre **como escolher os procedimentos** na prática?” ou  
+  “Prefere **parcelamento automático** ou **manual**? Posso explicar os dois rapidinho.”
+
+---
 
 **Cadastro de ficha técnica ou ficha de anamnese:**
-1. Na aba **Outros**, procure o módulo **Minhas Fichas Técnicas**.
-2. Clique em **Nova Ficha**.
-3. Selecione o **Titulo da Ficha**, **Descrição** (opcional) e o Status (entre Rascunho, Arquivado ou Publicado).
-O status **Publicado** é o que permite que a ficha seja utilizada em atendimentos, já o status **Rascunho** e **Arquivado** não exibem diretamente para o uso.
-4. Em seguida, você irá **construir** sua ficha técnica, podendo adicionar os seguintes tipos de campos (componentes):
-    1) Texto Curto
-    2) Texto Extenso
-    3) Escolha um
-    4) Escolha Vários
-    5) Número
-    6) Data
-    7) Switch (Liga/Desliga)
-    8) Titulo da Seção
-Você pode clicar no botão no canto superior direito da tela de **Exemplo**, onde o sistema criará uma ficha de exemplo para você entender melhor como funciona e caso queira ver como a ficha está ficando, clique em **Visualizar Ficha** no final da página.
-5. Após adicionar os campos desejados, caso queira movimentar os campos, editar ou remover, cada componente é apresentado em uma lista em sua respectiva ordem, com os botões de **Editar**, **Remover** e **Mover** (setas para cima e para baixo).
-6. Por fim, clique em **Salvar** para registrar a ficha técnica. O sistema retornará para a listagem de fichas técnicas, onde você poderá ver a ficha criada.
+
+A **Ficha Técnica** (ou **Ficha de Anamnese**) é onde o profissional registra **informações detalhadas do atendimento** e o **consentimento do cliente**.  
+Ela funciona como um **formulário digital personalizável**, com campos de texto, seleção, data, switches (liga/desliga) e muito mais.
+
+Cada ficha é baseada em um **modelo (template)** criado pelo profissional, que define os **campos e perguntas** que aparecerão durante o atendimento.  
+Você pode criar diferentes modelos conforme o tipo de serviço (ex.: *Extensão de Cílios*, *Limpeza de Pele*, *Depilação*, etc.).
+
+---
+
+### 🪄 Passo a passo para criar uma ficha técnica
+
+1. **Acesse o módulo**
+   - Vá até a aba **Outros** e clique em **Minhas Fichas Técnicas**.
+   - É ali que ficam todas as fichas criadas, com seus status e versões.
+
+2. **Crie uma nova ficha**
+   - Clique no botão **Nova Ficha** para abrir o construtor de fichas técnicas.
+
+3. **Defina as informações básicas**
+   - **Título da Ficha:** nome que identifica o tipo de atendimento (ex.: “Extensão de Cílios - Volume Russo”).  
+   - **Descrição (opcional):** resumo sobre o objetivo da ficha.  
+   - **Status da Ficha:**
+     - 🟢 **Publicado:** pronto para uso nos atendimentos.
+     - 🟡 **Rascunho:** ainda em construção, não disponível para uso.
+     - ⚪ **Arquivado:** guardado apenas para consulta, não pode ser usado em novos atendimentos.
+
+4. **Monte os campos da ficha (componentes)**
+   - Você pode adicionar **campos dinâmicos** clicando em **Adicionar Campo**.
+   - Cada campo (componente) representa uma pergunta ou informação a ser coletada.
+   - Tipos de campos disponíveis:
+     1. 📝 **Texto Curto:** para respostas simples (ex.: “Nome do cliente”).
+     2. 🗒️ **Texto Extenso:** para respostas detalhadas (ex.: “Observações do atendimento”).
+     3. 🔘 **Escolha Um:** múltipla escolha simples (ex.: “Tipo de pele: Seca / Oleosa / Mista”).
+     4. ☑️ **Escolha Vários:** seleção múltipla (ex.: “Serviços realizados: Limpeza / Peeling / Hidratação”).
+     5. 🔢 **Número:** campos numéricos (ex.: “Idade”, “Duração do procedimento”).
+     6. 📅 **Data:** campos para registrar datas específicas.
+     7. 🔄 **Switch (Liga/Desliga):** perguntas de sim/não (ex.: “É gestante?”).
+     8. 🧩 **Título de Seção:** usado para separar blocos da ficha.
+
+   💡 **Dica:** clique no botão **“Exemplo”** (canto superior direito) — o sistema criará uma ficha automática para demonstrar como o construtor funciona.
+
+5. **Organize e edite os campos**
+   - Cada campo aparece em uma **lista de componentes**, onde você pode:
+     - ✏️ **Editar:** alterar o texto, tipo ou opções.
+     - 🗑️ **Remover:** excluir o campo.
+     - ⬆️⬇️ **Mover:** alterar a ordem dos campos.
+
+6. **Pré-visualize a ficha**
+   - Antes de salvar, clique em **Visualizar Ficha** para abrir um modal com a **visualização real** da ficha preenchida.  
+   - Isso permite conferir o layout final antes de publicar.
+
+7. **Salve e finalize**
+   - Clique em **Salvar** para registrar a ficha.  
+   - Após salvar, o sistema retorna à listagem, onde você pode:
+     - Consultar todas as fichas criadas,  
+     - Editar versões anteriores,  
+     - Ou criar uma nova versão a partir de outra já existente.
+
+---
+
+### 💬 Perguntas comuns sobre fichas técnicas
+
+- **“O que significa o status publicado?”**  
+  → Significa que a ficha está pronta e disponível para ser usada em atendimentos.
+
+- **“Posso criar várias fichas diferentes?”**  
+  → Sim! Cada ficha é independente e pode representar um tipo de serviço específico.
+
+- **“Como eu adiciono perguntas na ficha?”**  
+  → Basta clicar em **Adicionar Campo** e escolher o tipo de componente desejado (texto, número, múltipla escolha etc.).
+
+- **“Tem como ver como a ficha vai ficar antes de salvar?”**  
+  → Sim. Use o botão **Visualizar Ficha** para abrir a pré-visualização completa.
+
+- **“Posso testar um modelo pronto?”**  
+  → Sim. O botão **Exemplo** cria uma ficha de demonstração para você entender como ela funciona.
+
+---
+
+### 🤖 Dica para o assistente
+
+Se o usuário perguntar algo relacionado a:
+- criação de ficha,  
+- status,  
+- tipos de campos,  
+- pré-visualização,  
+- ou diferença entre modelos,  
+
+→ Responda usando os trechos correspondentes acima.  
+→ Se ele quiser ver um exemplo, explique o botão **Exemplo** e **Visualizar Ficha**.  
+→ Se pedir orientação prática, descreva o fluxo de forma resumida e convide para continuar (“Quer que eu te mostre o passo a passo na prática?”).
 
 **Criar um lembrete/tarefa:**
 1. Acesse **Tarefas/Lembretes**.

@@ -42,8 +42,7 @@ export async function POST(req: Request) {
         Exemplo:  
         - “Quer que eu te mostre como cadastrar isso na prática?”  
         - “Posso te explicar como esse recurso aparece na agenda?”  
-        - “Quer ver como os clientes visualizam isso no portal?”  
-
+        - “Quer que eu te explique de forma análoga?”
       ---
 
       📚 **Base de conhecimento oficial:**
