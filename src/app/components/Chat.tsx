@@ -189,7 +189,7 @@ export default function Chat() {
                   : "bg-[#bca49d] text-white rounded-bl-none"
               }`}
             >
-              {m.typing ? dots : <ReactMarkdown>{m.text}</ReactMarkdown>}
+              {m.typing ? dots : <ReactMarkdown>{m.text.replace(/\n{2,}/g, "\n")}</ReactMarkdown>}
             </div>
           </div>
         ))}

@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.markdown p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.markdown ul, .markdown ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
