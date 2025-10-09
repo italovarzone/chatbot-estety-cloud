@@ -4,7 +4,7 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 
 ====================================================================
 # 1) Visão Geral
-- O Estety Cloud é um sistema de gestão para **clínicas e profissionais de estética e beleza**.
+- O Estety Cloud é um sistema de gestão com ênfase em **clínicas e profissionais de estética e beleza**.
 - Centraliza **agenda**, **clientes**, **procedimentos**, **fichas técnicas**, **tarefas/lembretes**, **vendas/recebíveis** e **indicadores** em um só lugar.
 - Funciona no navegador e pode ser instalado como **app** no celular ou computador.
 - Suporta **multiusuário** (equipe) e **multiunidade/empresa**.
@@ -187,23 +187,53 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 ====================================================================
 # 4) Fluxos Comuns (Passo a passo)
 
-**Agendar um atendimento:**
-1. Abra **Agenda** e clique em **Novo Agendamento**.
-2. Escolha o **cliente** (ou cadastre um novo).
-3. Selecione o(s) **procedimento(s)** e o **horário**.
-4. Salve. Se houver conflito, o sistema sugere **alternativas**.
+**Como agendar um cliente:**
+1. Na aba **Agendamentos**, encontre "Cadastrar Agendamento" em seguida clique para acessar.
+2. Selecione o **cliente** no campo de busca, podendo também filtrar pelo **nome do cliente** para agilizar a busca.
+3. Em seguida, o(s) **procedimento(s)**, mostrando o valor total caso selecione mais de um.
+4. Por fim, selecione a **data** desejada do agendamento e o **horário**.
+5. Clique no botão **Cadastrar Agendamento**. Caso haja conflitos na agenda, o sistema avisa sobre alguma intercorrência do profissional, conflitos entre horarios e sempre dá a opção de **Encaixe Forçado** na agenda.
+6. O Aplicativo encaminhará você para a tela de **Meus agendamentos** com o agendamento criado.
 
-**Registrar uma venda/recebível:**
-1. Acesse **Vendas/Recebíveis**.
-2. Informe o **pedido/parcelas**.
-3. Marque parcelas **pagas** quando receber.
-4. Confira os **resumos** no **Dashboard**.
+**Registrar uma venda/revenda/pedido:**
+1. Na aba **Outros**, acesse o módulo **Vendas**.
+2. Clique no botão **Incluir**.
+3. Será apresentado duas guias, a primeira sendo **Dados do Pedido** e a outra **Plano de Pagamento**. Observações:
+  - Para seguir para a proxima guia, é necessário que preencha a data da venda e adicione ao menos um item antes de prosseguir.
+4. Selecione o **cliente** no campo de busca, podendo também filtrar pelo **nome do cliente** para agilizar a busca.
+5. Preencha **Data da Venda**.
+6. Em seguida, o(s) **item(s)**, com os campos:
+  - Nome do Produto
+  - Valor do Produto
+  - Valor da Revenda (Se houver)
+  - Quantidade
+7. Preenchendo as informações, clique em **Adicionar Item**. Agora, exibirá uma listagem dos itens adicionados e permitirá que você **Remova** caso necessário.
+8. Agora, clique na guia **Plano de Pagamento**.
+9. Na aba **Plano de Pagamento** é exibido o **Valor da Revenda**, **Valor Total dos Produtos** e as **Parcelas Pagas** avisando a quantidade que falta para quitar o pedido.
+10. Seguindo, você pode aplicar o plano de pagamento de **duas formas**, sendo elas **Automático** e **Manual**.
+  - No **Automático**, você informa a quantidade de parcelas, a forma de pagamento entre: **Pix**, **Cartão de Crédito**, **Dinheiro** ou **Notas Promissórias**, e o dia do pagamento padrão. O sistema se encarrega de dividir o valor total em parcelas iguais.
+  - No **Manual**, você informa a data da parcela, valor, forma de pagamento e adiciona uma a uma.
+11. Após preencher as informações, clique em **Adicionar Parcela**. Agora, exibirá uma listagem das parcelas adicionadas e permitirá que você **Remova** uma ou **Remova todas** caso necessário.
+12. Por fim, clique em **Salvar** para registrar a venda.
 
-**Preencher a ficha técnica de um atendimento:**
-1. Abra o **cliente** e vá em **Fichas Técnicas**.
-2. Escolha um **template** (ou use a ficha padrão).
-3. Responda às perguntas e registre o **consentimento**.
-4. Salve e a ficha fica no **histórico** do cliente.
+**Cadastro de ficha técnica ou ficha de anamnese:**
+1. Na aba **Outros**, procure o módulo **Minhas Fichas Técnicas**.
+2. Clique em **Nova Ficha**.
+3. Selecione o **Titulo da Ficha**, **Descrição** (opcional) e o Status (entre Rascunho, Arquivado ou Publicado).
+   - PS. O status **Publicado** é o que permite que a ficha seja utilizada em atendimentos, já o status **Rascunho** e **Arquivado** não exibem diretamente para o uso.
+4. Em seguida, você irá **construir** sua ficha técnica, podendo adicionar os seguintes tipos de campos (componentes):
+    - Texto Curto
+    - Texto Extenso
+    - Escolha um
+    - Escolha Vários
+    - Número
+    - Data
+    - Switch (Liga/Desliga)
+    - Titulo da Seção
+
+    PS. Você pode clicar no botão no canto superior direito da tela de **Exemplo**, onde o sistema criará uma ficha de exemplo para você entender melhor como funciona e caso queira ver como a ficha está ficando, clique em **Visualizar Ficha** no final da página.
+5. Após adicionar os campos desejados, caso queira movimentar os campos, editar ou remover, cada componente é apresentado em uma lista em sua respectiva ordem, com os botões de **Editar**, **Remover** e **Mover** (setas para cima e para baixo).
+6. Por fim, clique em **Salvar** para registrar a ficha técnica. O sistema retornará para a listagem de fichas técnicas, onde você poderá ver a ficha criada.
 
 **Criar um lembrete/tarefa:**
 1. Acesse **Tarefas/Lembretes**.
