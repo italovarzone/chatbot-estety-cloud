@@ -1,9 +1,5 @@
-import Chat from "./components/Chat";
+import ChatContainer from "./components/ChatContainer";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
-      <Chat />
-    </main>
-  );
+  return <ChatContainer />;
 }

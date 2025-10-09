@@ -1,16 +1,76 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { ChatRecord } from "./ChatHistory";
 
-type Message = { role: "user" | "bot"; text: string; typing?: boolean };
+export type Message = { role: "user" | "bot"; text: string; typing?: boolean };
 
-export default function Chat() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "bot",
-      text: "👋 Olá! Eu sou o **Assistente Estety Cloud**. Pode me perguntar qualquer coisa sobre o sistema 📚",
-    },
-  ]);
+type ChatProps = {
+  chatId: string;
+  initialMessages: Message[];
+  onMessagesChange: (msgs: Message[]) => void;
+};
+
+export default function Chat({
+  chatId,
+  initialMessages,
+  onMessagesChange,
+}: ChatProps) {
+  const [messages, setMessages] = useState<Message[]>(
+    initialMessages || [
+      {
+        role: "bot",
+        text: "👋 Olá! Eu sou o **Assistente Estety Cloud**. Caso tenha alguma dúvida sobre o sistema, estarei aqui a todo momento! 📚",
+      },
+    ]
+  );
+
+  useEffect(() => {
+    // só executa se houver novas mensagens
+    if (initialMessages !== messages) {
+      onMessagesChange(messages);
+
+      // pega a primeira mensagem do usuário
+      const firstUserMsg = messages.find((m) => m.role === "user");
+
+      if (firstUserMsg) {
+        try {
+          const history = JSON.parse(localStorage.getItem("chatHistory") || "[]");
+          const chat = history.find((c: ChatRecord) => c.id === chatId);
+
+          if (chat && chat.title === "Nova conversa") {
+            // 🔥 gera um título inteligente baseado na primeira pergunta
+            const question = firstUserMsg.text.trim();
+
+            // remove emojis e pontuações longas
+            const clean = question
+              .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "")
+              .replace(/\s+/g, " ")
+              .replace(/[?!,.]{2,}/g, ".")
+              .trim();
+
+            // título: primeiras 5 a 7 palavras com iniciais maiúsculas
+            const words = clean.split(" ");
+            let title =
+              words.length <= 6
+                ? clean
+                : words.slice(0, 6).join(" ") + "...";
+
+            // deixa primeira letra maiúscula
+            title = title.charAt(0).toUpperCase() + title.slice(1);
+
+            chat.title = title;
+            localStorage.setItem("chatHistory", JSON.stringify(history));
+          }
+        } catch (err) {
+          console.warn("⚠️ Erro ao gerar título automático:", err);
+        }
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [messages]);
+
   const [input, setInput] = useState("");
   const [formData, setFormData] = useState({ nome: "", telefone: "", email: "" });
   const [awaitingData, setAwaitingData] = useState(false);
@@ -92,6 +152,7 @@ export default function Chat() {
           } else {
             botReply("❌ Ocorreu um erro ao enviar seus dados. Tente novamente.");
           }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (err) {
           botReply("⚠️ Erro de conexão ao enviar os dados. Tente novamente.");
         }
@@ -122,6 +183,7 @@ export default function Chat() {
       }
 
       botReply(reply);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err: unknown) {
       botReply("⚠️ Erro ao consultar a IA. Tente novamente em instantes.");
     }
@@ -130,7 +192,7 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex flex-col h-[100dvh] w-screen bg-[#fff] relative">
+    <div className="flex flex-col h-[100dvh] bg-white relative rounded-lg overflow-hidden shadow-sm">
       {/* Header estilo WhatsApp */}
       <header className="bg-[#9d8983] text-white px-4 py-2 flex items-center gap-3 shadow-md fixed top-0 left-0 right-0 z-10">
         {/* Avatar fixo */}
@@ -197,7 +259,7 @@ export default function Chat() {
       </div>
 
       {/* Input fixo */}
-      <div className="p-3 border-t bg-white fixed bottom-0 left-0 right-0 z-10">
+      <div style={{ paddingBottom: "32px" }} className="p-3 border-t bg-white fixed bottom-0 left-0 right-0 z-10">
         {awaitingData ? (
           <div className="space-y-2">
             <input
