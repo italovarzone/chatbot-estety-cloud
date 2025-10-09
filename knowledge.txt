@@ -42,7 +42,7 @@ O Estety Cloud permite criar **quantas fichas quiser**, adaptando-as por tipo de
 
 ---
 
-### 🧭 Como funciona a criação
+### 🧭 2.1 Como funciona a criação
 
 1. **Acesse o módulo:**  
    Vá em **Outros → Minhas Fichas Técnicas**.
@@ -81,6 +81,28 @@ O Estety Cloud permite criar **quantas fichas quiser**, adaptando-as por tipo de
    Após revisar, clique em **Salvar**.  
    A ficha será listada e poderá ser usada nos próximos atendimentos.
 
+### 🧭 2.2 Como funciona a edição de uma ficha técnica
+1. **Acesse o módulo:**  
+   Vá em **Outros → Minhas Fichas Técnicas**.
+2. **Encontre a ficha:**
+    Use os filtros de busca para localizar a ficha pelo nome, ordenar por, filtrar por status.
+3. **Edite a ficha:**
+    Clique no ícone de lápis ao lado do nome da ficha.
+4. **Faça as alterações necessárias:**  
+   Adicione, remova ou reorganize os campos conforme necessário.
+5. **Salve as mudanças:**  
+   Clique em **Salvar** para atualizar o modelo da ficha técnica.
+
+### 🧭 2.3 Como funciona a exclusão de uma ficha técnica
+1. **Acesse o módulo:**  
+   Vá em **Outros → Minhas Fichas Técnicas**.
+2. **Encontre a ficha:**
+    Use os filtros de busca para localizar a ficha pelo nome, ordenar por, filtrar por status.
+3. **Exclua a ficha:**
+    Clique no ícone de lixeira ao lado do nome da ficha.
+4. **Confirme a exclusão:**  
+   O sistema solicitará confirmação. Clique em **Sim** para excluir a ficha.
+
 ---
 
 ### 🤝 Benefícios na prática
@@ -103,7 +125,87 @@ O Estety Cloud permite criar **quantas fichas quiser**, adaptando-as por tipo de
 
 ---
 
-## 💰 3. Módulo de Vendas e Revenda
+## 🗣️ 3. Módulo de Clientes
+### 💡 3.1 O que é
+O módulo de **Clientes** é onde você armazena e gerencia todas as informações dos seus clientes, como:
+- Dados pessoais (nome, telefone, e-mail, data de nascimento, etc.);
+- Histórico de atendimentos;
+- Fichas técnicas preenchidas;
+- Quantidade de agendamentos realizados, clientes inativos, entre outros.
+
+### 💡 3.2 Listagem de clientes
+Na tela de **Lista de Clientes**, você pode:
+- Ver todos os clientes cadastrados;
+- Usar filtros para encontrar clientes específicos (por nome, inatividade, etc.);
+- Ordenar a lista por nome, data de cadastro ou número de atendimentos;
+- Editar, ver fichas tecnicas do cliente, encaminhar mensagem padrão para o whatsapp do cliente, histórico de agendamentos e excluir cadastros existentes.
+
+### 🧭 3.3 Como cadastrar um cliente
+
+1. **Acesse o módulo:**  
+   Vá em **Clientes → Cadastrar Cliente**.
+
+3. **Preencha as informações do cliente:**  
+   - **Nome**  
+   - **Telefone**  
+   - **Data de Nascimento**
+    - **E-mail** (opcional)
+    - **Senha** (opcional, para acesso ao portal do cliente)
+    - **Pacotes** (opcional, para controle de pacotes de procedimentos)
+
+4. **Salve o cadastro:**  
+   Após preencher os dados, clique em **Salvar**.  
+   O cliente será adicionado à sua lista.
+
+### 🧭 3.4 Como editar um cliente
+1. **Acesse o módulo:**  
+   Vá em **Clientes → Lista de Clientes**.
+
+2. **Encontre o cliente:**
+    Use os filtros de busca para localizar o cliente pelo nome, ordenar por, filtrar por inatividade.
+
+3. **Edite as informações:**  
+   Clique no ícone de lápis ao lado do nome do cliente.
+
+4. **Atualize os dados:**  
+   Faça as alterações necessárias nos campos.
+
+5. **Salve as mudanças:**  
+   Clique em **Salvar** para atualizar o cadastro.
+
+### 🧭 3.5 Acesso em "Ver Fichas Tecnicas" de um cliente
+1. **Acesse o módulo:**  
+   Vá em **Clientes → Lista de Clientes**.
+2. **Encontre o cliente:**
+    Use os filtros de busca para localizar o cliente pelo nome, ordenar por, filtrar por inatividade.
+3. **Veja as fichas técnicas:**  
+   Clique no ícone de arquivo ao lado do nome do cliente.
+4. **Visualize o histórico:**  
+   Será exibido em uma listagem todas as fichas desse cliente.
+5. **Detalhes da ficha:**  
+   Clique no ícone de olho para ver o conteúdo completo da ficha técnica.
+6. **Baixe ou imprima:**  
+   Use os botões disponíveis para baixar ou imprimir a ficha, se necessário.
+7. Cadastre novas fichas técnicas para esse cliente diretamente do perfil dele, clicando em "Cadastrar Nova".
+   Abrirá uma nova tela para você preencher a ficha técnica, que ficará vinculada ao perfil do cliente.
+
+### 💬 Perguntas que o chatbot deve entender e continuar o contexto
+- “Como cadastrar um cliente?” → Responder com o passo a passo completo.
+- “Quais informações são necessárias?” → Listar todos os campos obrigatórios e opcionais.
+- “Posso editar as informações do cliente depois?” → Explicar como funciona a edição de cadastro (Sessão 3.4 do módulo de clientes).
+- “Como encontrar um cliente específico?” → Falar sobre os filtros de busca.
+- “O que são pacotes de procedimentos?” → Dizer que ainda não está implementado, mas que é uma funcionalidade futura.
+- “Como vejo as fichas técnicas de um cliente?” → Explicar o passo a passo na seção 3.5.
+- “Como cadastro uma nova ficha técnica?” → Acesse na base de conhecimento o "2. Módulo de Fichas Técnicas" e veja como criar uma ficha técnica.
+- “Posso editar uma ficha técnica depois de cadastrada?” → Acesse na base de conhecimento o "2. Módulo de Fichas Técnicas" e veja como editar fichas técnicas.
+- “Como excluo uma ficha técnica?” → Acesse na base de conhecimento o "2. Módulo de Fichas Técnicas" e veja como excluir fichas técnicas.
+- “Como vejo o histórico de agendamentos de um cliente?” → Acesse na base de conhecimento o "3. Módulo de Clientes" e veja como visualizar o histórico de agendamentos.
+
+➡️ **O chatbot deve manter o contexto de Clientes** até que o usuário mude o assunto manualmente.
+
+---
+
+## 💰 4. Módulo de Vendas e Revenda
 
 ### 💡 O que é
 O módulo de **Vendas** (também chamado de **Revenda** ou **Pedidos**) ajuda a registrar **produtos e serviços vendidos**, controlar **parcelas**, e visualizar **o que já foi pago** e **o que ainda falta receber**.
@@ -185,3 +287,4 @@ Perfeito para clínicas que vendem:
 > “O Estety Cloud é um sistema completo para clínicas e profissionais da estética.  
 > Ele centraliza atendimentos, fichas técnicas e vendas em um único lugar, garantindo praticidade e segurança.  
 > Quer que eu te mostre como usar as fichas ou prefere entender o módulo de vendas primeiro?”
+
