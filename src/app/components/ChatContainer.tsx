@@ -3,25 +3,23 @@ import { useState, useEffect } from "react";
 import Chat, { Message } from "./Chat";
 import ChatHistory, { ChatRecord } from "./ChatHistory";
 import { Menu, X } from "lucide-react";
-import { openDB } from "idb";
+import { loadChatFromDisk, saveChatToDisk } from "../../../utils/chatStorage";
 
 export default function ChatContainer() {
   const [chats, setChats] = useState<ChatRecord[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [showHistory, setShowHistory] = useState(false);
 
-  // Salva automaticamente o histórico
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    
-    const saveChats = async () => {
-      const db = await openDB("ChatDB", 1, {
-        upgrade(db) { db.createObjectStore("chats"); },
-      });
-      await db.put("chats", chats, "chatHistory");
-    };
-    saveChats();
-  }, [chats]);
+    useEffect(() => {
+    (async () => {
+        const saved = await loadChatFromDisk();
+        if (saved?.length) setChats(saved);
+    })();
+    }, []);
+
+    useEffect(() => {
+    saveChatToDisk(chats);
+    }, [chats]);
 
   // Cria nova conversa
   const handleNewChat = () => {
