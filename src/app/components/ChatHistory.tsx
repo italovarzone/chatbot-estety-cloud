@@ -2,6 +2,23 @@
 import { useState } from "react";
 import { Trash2, PlusCircle, MessageSquare, Edit3 } from "lucide-react";
 import { Message } from "./Chat";
+import { openDB } from "idb";
+
+async function getHistory() {
+  const db = await openDB("ChatDB", 1, {
+    upgrade(db) {
+      if (!db.objectStoreNames.contains("chats")) {
+        db.createObjectStore("chats");
+      }
+    },
+  });
+  return (await db.get("chats", "chatHistory")) || [];
+}
+
+async function saveHistory(data: unknown) {
+  const db = await openDB("ChatDB", 1);
+  await db.put("chats", data, "chatHistory");
+}
 
 export type ChatRecord = {
   id: string;
@@ -32,15 +49,15 @@ export default function ChatHistory({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [newTitle, setNewTitle] = useState("");
 
-  const handleRename = (id: string) => {
-    const history = JSON.parse(localStorage.getItem("chatHistory") || "[]");
-    const chat = history.find((c: ChatRecord) => c.id === id);
-    if (chat) {
-      chat.title = (newTitle || "Nova conversa").trim();
-      localStorage.setItem("chatHistory", JSON.stringify(history));
-    }
-    setEditingId(null);
-  };
+const handleRename = async (id: string) => {
+  const history = await getHistory();
+  const chat = history.find((c: ChatRecord) => c.id === id);
+  if (chat) {
+    chat.title = (newTitle || "Nova conversa").trim();
+    await saveHistory(history);
+  }
+  setEditingId(null);
+};
 
   return (
     <div className="flex flex-col h-[calc(100%-48px)] overflow-hidden">

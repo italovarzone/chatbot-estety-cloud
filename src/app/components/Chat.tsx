@@ -3,6 +3,24 @@
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { ChatRecord } from "./ChatHistory";
+import { openDB } from "idb";
+
+async function getHistory() {
+  const db = await openDB("ChatDB", 1, {
+    upgrade(db) {
+      if (!db.objectStoreNames.contains("chats")) {
+        db.createObjectStore("chats");
+      }
+    },
+  });
+  return (await db.get("chats", "chatHistory")) || [];
+}
+
+async function saveHistory(data: unknown) {
+  const db = await openDB("ChatDB", 1);
+  await db.put("chats", data, "chatHistory");
+}
+
 
 export type Message = { role: "user" | "bot"; text: string; typing?: boolean };
 
@@ -26,50 +44,40 @@ export default function Chat({
     ]
   );
 
-  useEffect(() => {
-    // só executa se houver novas mensagens
-    if (initialMessages !== messages) {
-      onMessagesChange(messages);
+useEffect(() => {
+  if (initialMessages !== messages) {
+    onMessagesChange(messages);
 
-      // pega a primeira mensagem do usuário
-      const firstUserMsg = messages.find((m) => m.role === "user");
-
-      if (firstUserMsg) {
+    const firstUserMsg = messages.find((m) => m.role === "user");
+    if (firstUserMsg) {
+      (async () => {
         try {
-          const history = JSON.parse(localStorage.getItem("chatHistory") || "[]");
+          const history = await getHistory();
           const chat = history.find((c: ChatRecord) => c.id === chatId);
 
           if (chat && chat.title === "Nova conversa") {
-            // 🔥 gera um título inteligente baseado na primeira pergunta
             const question = firstUserMsg.text.trim();
-
-            // remove emojis e pontuações longas
             const clean = question
               .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "")
               .replace(/\s+/g, " ")
               .replace(/[?!,.]{2,}/g, ".")
               .trim();
 
-            // título: primeiras 5 a 7 palavras com iniciais maiúsculas
             const words = clean.split(" ");
-            let title =
-              words.length <= 6
-                ? clean
-                : words.slice(0, 6).join(" ") + "...";
-
-            // deixa primeira letra maiúscula
+            let title = words.length <= 6 ? clean : words.slice(0, 6).join(" ") + "...";
             title = title.charAt(0).toUpperCase() + title.slice(1);
 
             chat.title = title;
-            localStorage.setItem("chatHistory", JSON.stringify(history));
+            await saveHistory(history);
           }
         } catch (err) {
           console.warn("⚠️ Erro ao gerar título automático:", err);
         }
-      }
+      })();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [messages]);
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [messages]);
 
   const [input, setInput] = useState("");
   const [formData, setFormData] = useState({ nome: "", telefone: "", email: "" });
