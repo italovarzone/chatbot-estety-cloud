@@ -1,6 +1,7 @@
 # Estety Cloud — Knowledge (versão para atendimento comercial)
 Este documento foi pensado para treinar um chatbot que responde a **potenciais clientes** do Estety Cloud. 
 Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a dia** e quais **benefícios práticos** cada módulo entrega.
+Quando encontrar na documentação algo como "!!", o texto que estiver na frente é uma instrução para o chatbot, não deve ser lido para o cliente.
 
 ====================================================================
 # 1) Visão Geral
@@ -76,22 +77,22 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 
 ---
 
-## 3.4 Fichas Técnicas (Atendimento + Consentimento)
+## 3.4 Fichas Técnicas
 **O que é:**
-- Registro formal do atendimento com **perguntas de saúde/estilo de vida**, fotos/observações e **consentimento** do cliente.
-- O Estety Cloud oferece **dois jeitos**: 
-  1) **Fichas fixas** (perguntas comuns do dia a dia, já prontas).
-  2) **Fichas por Template** (você monta o questionário do seu jeito).
+- Registro formal do atendimento com **perguntas de saúde/estilo de vida** e **consentimento** do cliente.
+- O Estety Cloud oferece **Fichas Genéricas/Personalizadas** pelo proprio profissional.
 
 **O que dá para fazer:**
-- Preencher a ficha de cada atendimento e **guardar o consentimento** do cliente.
 - Criar **templates** personalizados de ficha (campos de texto, múltipla escolha, data, liga/desliga etc.).
-- Consultar o **histórico** por cliente, por data ou por tipo de procedimento.
+- Caso queira montar a ficha técnica e terminar mais tarde, há a opção de salvar como **rascunho**, que pode ser editado posteriormente.
+- Cada cliente possui uma lista de fichas técnicas associadas a ele, assim o cliente pode ter, por exemplo, uma ficha de extensão de cílios e outra de limpeza de pele.
 
 **Benefícios práticos:**
 - **Segurança** jurídica e técnica com registro de consentimento.
 - **Padronização** do protocolo de atendimento por serviço.
 - Facilita auditoria e acompanhamento de **evolução** do cliente.
+
+!! Caso o cliente pergunte "Como criar uma ficha técnica?" ou "Como cadastrar uma ficha técnica?", responda com o passo a passo detalhado na seção 4 (Fluxos Comuns) em **Cadastro de ficha técnica ou ficha de anamnese**.
 
 ---
 
@@ -220,18 +221,17 @@ Evita jargões técnicos e explica **o que o app faz**, **como ajuda no dia a di
 1. Na aba **Outros**, procure o módulo **Minhas Fichas Técnicas**.
 2. Clique em **Nova Ficha**.
 3. Selecione o **Titulo da Ficha**, **Descrição** (opcional) e o Status (entre Rascunho, Arquivado ou Publicado).
-   - PS. O status **Publicado** é o que permite que a ficha seja utilizada em atendimentos, já o status **Rascunho** e **Arquivado** não exibem diretamente para o uso.
+O status **Publicado** é o que permite que a ficha seja utilizada em atendimentos, já o status **Rascunho** e **Arquivado** não exibem diretamente para o uso.
 4. Em seguida, você irá **construir** sua ficha técnica, podendo adicionar os seguintes tipos de campos (componentes):
-    - Texto Curto
-    - Texto Extenso
-    - Escolha um
-    - Escolha Vários
-    - Número
-    - Data
-    - Switch (Liga/Desliga)
-    - Titulo da Seção
-
-    PS. Você pode clicar no botão no canto superior direito da tela de **Exemplo**, onde o sistema criará uma ficha de exemplo para você entender melhor como funciona e caso queira ver como a ficha está ficando, clique em **Visualizar Ficha** no final da página.
+    1) Texto Curto
+    2) Texto Extenso
+    3) Escolha um
+    4) Escolha Vários
+    5) Número
+    6) Data
+    7) Switch (Liga/Desliga)
+    8) Titulo da Seção
+Você pode clicar no botão no canto superior direito da tela de **Exemplo**, onde o sistema criará uma ficha de exemplo para você entender melhor como funciona e caso queira ver como a ficha está ficando, clique em **Visualizar Ficha** no final da página.
 5. Após adicionar os campos desejados, caso queira movimentar os campos, editar ou remover, cada componente é apresentado em uma lista em sua respectiva ordem, com os botões de **Editar**, **Remover** e **Mover** (setas para cima e para baixo).
 6. Por fim, clique em **Salvar** para registrar a ficha técnica. O sistema retornará para a listagem de fichas técnicas, onde você poderá ver a ficha criada.
 
